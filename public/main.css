@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&family=Inter&family=Lato&display=swap');
 
 :root{
-  --primary: #0f1927;
+  --primary: #0D1526;
   --second: #46fcb4;
   --nav-background: rgba(16, 26, 40, 0.075);
   --text-color-primary: #ffffff; 
-  --text-color-second: #cbd5e1;
-  --background-gradient: linear-gradient(to top, #0f1927, #131f31, #16263a, #1a2c45, #1e334f);
+  --text-color-second: #CAD4E0;
+  --background-gradient: linear-gradient(to top, #0D1526, #131f31, #16263a, #1a2c45, #1E283A);
   --inter-font: 'Inter', sans-serif;
   --lato-font: 'Lato', sans-serif;
   --header-height: 5rem;
-  --footer-background-color: #091321;
+  --footer-background-color: #0C1120;
   --crimson-font: 'Crimson Pro', serif;
 }
 
@@ -236,19 +236,20 @@ article {
 }
 
 #contant-container th, td{
+  
   color: var(--text-color-primary);
   padding: 2rem 0;
   padding-right: 4rem;
 }
 
-#contant-container tbody tr{
+#contant-container tbody td{
   color: var(--text-color-second);
 }
 
 #contant-container tbody td:hover{
   color: var(--second);
-  font-size: 2em;
-  transition: all 0.2s ease-in;
+  padding-left: 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 
@@ -262,8 +263,7 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: #131f3198 solid 2px;
-  
+
 }
 
 ::-webkit-scrollbar{
