@@ -13,6 +13,7 @@
   --header-height: 5rem;
   --footer-background-color: #0C1120;
   --crimson-font: 'Crimson Pro', serif;
+  --github-project-background: rgba(13, 21, 38, 0.3);
 }
 
 
@@ -197,9 +198,7 @@ article {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding-left: 4rem;
-  padding-bottom: 9rem;
-  padding-top: 9rem;
+  padding: 9rem 0 9rem 9rem;
   gap: 1.5rem;
 }
 
@@ -208,7 +207,7 @@ article {
   background: #0f1927;
   color: var(--text-color-second);
   border-radius: 0.75rem;
-  padding: calc(1px * 4) 1rem;
+  padding: 0.25rem 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   vertical-align: middle;
@@ -219,8 +218,8 @@ article {
 
 #contant-container{
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -252,7 +251,49 @@ article {
   transition: all 0.2s ease-in-out;
 }
 
+.github-project {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  min-height: 12rem;
+  background-color: var(--github-project-background);
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
 
+.github-project:hover,
+:focus {
+  scale: 0.95;
+}
+
+.github-project :hover,:focus  {
+  color: var(--second);
+}
+
+.github-project:focus-visible {
+  outline: 0.1rem solid #46fcb4;
+}
+
+.github-project-details {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.github-project-details h3,
+p {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  opacity: 0.3;
+}
 
 
 .footer{
