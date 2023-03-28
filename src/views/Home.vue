@@ -1,4 +1,5 @@
-<script>
+<script setup>
+import GitHubProject from '../components/GitHubProject.vue';
 
 </script>
 
@@ -72,8 +73,12 @@
             </section>
             <section>
                 <article>
-                    <div id="contant-container">
+                    <div id="contant-container ">
                         <span id="content-header">Projekte</span>
+
+                        <GitHubProject></GitHubProject>
+
+
                     </div>
                     Section 3
                 </article>
