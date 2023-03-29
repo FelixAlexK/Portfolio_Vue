@@ -6,14 +6,14 @@
   --second: #46fcb4;
   --nav-background: rgba(16, 26, 40, 0.075);
   --text-color-primary: #ffffff; 
-  --text-color-second: #CAD4E0;
+  --text-color-second: #CBD5E1;
   --background-gradient: linear-gradient(to top, #0D1526, #131f31, #16263a, #1a2c45, #1E283A);
   --inter-font: 'Inter', sans-serif;
   --lato-font: 'Lato', sans-serif;
   --header-height: 5rem;
   --footer-background-color: #0C1120;
   --crimson-font: 'Crimson Pro', serif;
-  --github-project-background: rgba(13, 21, 38, 0.3);
+  --github-project-background: rgba(48, 56, 73, 0.3);
 }
 
 
@@ -29,6 +29,10 @@ body, html{
 
 *{
 box-sizing: border-box
+}
+
+a{
+  text-decoration: none;
 }
 
 #app {
@@ -91,14 +95,10 @@ box-sizing: border-box
   transition: all 0.2s ease-in-out;
 }
 
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
+
 
 .home,.contact,.about {
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: var(--header-height) 0 0 0;
@@ -110,81 +110,6 @@ a {
 }
 
 
-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-article {
-  width: 90%;
-  max-width: 100rem;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.aboutme {
-  height: 75vh;
-}
-
-.aboutme-content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  gap: 1.25rem;
-  width: 100%;
-  overflow: visible;
-}
-
-
-.aboutme-content h1{
-  color: var(--text-color-primary);
-  font-family: var(--crimson-font);
-  font-weight: 700;
-  font-size: 6em;
-  margin: 0 0 16px 0;
-  padding: 0;
-  overflow-wrap: break-word;
-  
-  
-}
-
-.aboutme-content p{
-  display: block;
-  max-width: 31vw;
-  font-size: 1.75em;
-  color: var(--text-color-second);
-  font-family: 'Inter', sans-serif;
-  margin: 16px 0;
-  padding: 0;
-  
-}
-
-.aboutme-content p strong{
-  color: #f4f4f5;
-}
-
-.aboutme-content p a{
-  font-size: inherit;
-  color: var(--text-color-second);
-  text-decoration: none;
-}
-
-.aboutme-content p a:hover{
-  color: var(--second);
-  text-decoration: underline;
-  transition: all 0.2s ease-in-out ;
-}
-
-
 .main-content-container{
   display: flex;
   flex-direction: column;
@@ -192,15 +117,10 @@ article {
   background-image: var(--background-gradient);
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
-.main-content-container article{
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 9rem 0 9rem 9rem;
-  gap: 1.5rem;
-}
+
 
 #content-header{
   display: flex;
@@ -214,85 +134,6 @@ article {
   white-space: nowrap;
   font-size: 1.5em;
   font-weight: 500;
-}
-
-#contant-container{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-}
-
-#contant-container table{
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 2em;
-  min-width: 400px;
-}
-
-#contant-container thead tr{
-  text-align: left;
-}
-
-#contant-container th, td{
-  
-  color: var(--text-color-primary);
-  padding: 2rem 0;
-  padding-right: 4rem;
-}
-
-#contant-container tbody td{
-  color: var(--text-color-second);
-}
-
-#contant-container tbody td:hover{
-  color: var(--second);
-  padding-left: 1rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.github-project {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  width: 25rem;
-  min-height: 12rem;
-  background-color: var(--github-project-background);
-  border-radius: 0.5rem;
-  margin: 1rem;
-}
-
-.github-project:hover,
-:focus {
-  scale: 0.95;
-}
-
-.github-project :hover,:focus  {
-  color: var(--second);
-}
-
-.github-project:focus-visible {
-  outline: 0.1rem solid #46fcb4;
-}
-
-.github-project-details {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.github-project-details h3,
-p {
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-
-p {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  line-height: 1.5em;
-  opacity: 0.3;
 }
 
 
