@@ -1,7 +1,6 @@
 <script setup>
 
 import { ref, watchEffect } from 'vue'
-import EYE from '../../public/icons/eye_icon.svg'
 
 const API_URL = `https://api.github.com/users/FelixAlexK/repos`
 const githubProjects = ref(null)
@@ -16,7 +15,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-    <section>
+    <section id="project-section">
         <article>
             <span id="content-header">Projekte</span>
             <div class="github-project">
@@ -29,15 +28,15 @@ watchEffect(async () => {
 
                     <div class="stats">
                         <div class="stat">
-                            <img src="/icons/star_icon.svg" format="svg" alt="stargazers_count" loading="lazy">
+                            <img src="/src/assets/icons/star_icon.svg" format="svg" alt="stargazers_count" loading="lazy">
                             {{ project.stargazers_count }}
                         </div>
                         <div class="stat">
-                            <img src="/icons/fork_icon.svg" format="svg" alt="forks" loading="lazy">
+                            <img src="/src/assets/icons/fork_icon.svg" format="svg" alt="forks" loading="lazy">
                             {{ project.forks }}
                         </div>
                         <div class="stat">
-                            <img src="/icons/eye_icon.svg" format="svg" alt="watchers_count" loading="lazy">
+                            <img src="/src/assets/icons/eye_icon.svg" format="svg" alt="watchers_count" loading="lazy">
                             {{ project.watchers_count }}
                         </div>
                     </div>
@@ -51,7 +50,7 @@ watchEffect(async () => {
 section {
     display: flex;
     justify-content: center;
-    padding: 9rem 9rem 9rem 9rem;
+    margin: 9rem;
     gap: 1.5rem;
 }
 
@@ -110,7 +109,7 @@ p {
 }
 
 .github-project-details h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--text-color-primary);
 }
 
@@ -138,7 +137,7 @@ p {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 00.5rem;
+    gap: 0.5rem;
     font-size: 1rem;
     color: var(--text-color-primary);
 
