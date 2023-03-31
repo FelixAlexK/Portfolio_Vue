@@ -18,30 +18,54 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>JavaScript</td>
-                        <td>git</td>
+                        <td>
+                            <p>JavaScript</p>
+                        </td>
+                        <td>
+                            <p>git</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>HTML</td>
-                        <td>Windows</td>
+                        <td>
+                            <p>HTML</p>
+                        </td>
+                        <td>
+                            <p>Windows</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>CSS</td>
-                        <td>Visual Studio Code</td>
+                        <td>
+                            <p>CSS</p>
+                        </td>
+                        <td>
+                            <p>Visual Studio Code</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Node.js</td>
-                        <td>Android Studio</td>
+                        <td>
+                            <p>Node.js</p>
+                        </td>
+                        <td>
+                            <p>Android Studio</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Vue.js</td>
-                        <td>IntelliJ</td>
+                        <td>
+                            <p>Vue.js</p>
+                        </td>
+                        <td>
+                            <p>IntelliJ</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Java</td>
+                        <td>
+                            <p>Java</p>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Kotlin</td>
+                        <td>
+                            <p>Kotlin</p>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -53,25 +77,28 @@
 
 <style scoped>
 section {
-    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+
 }
 
 article {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    margin: 9rem;
+    align-items: flex-start;
+    margin-top: 9rem;
+    width: 90%;
+    gap: 2rem;
 }
 
 table {
     border-collapse: collapse;
-    margin: 4rem 0;
-    font-size: 2rem;
+    font-size: 2vh;
     min-width: 400px;
+    width: 100%;
 }
 
 thead tr {
@@ -82,18 +109,22 @@ th,
 td {
 
     color: var(--text-color-primary);
-    padding: 2rem 0;
+    padding: 1rem 0;
     padding-right: 4rem;
 }
 
 tbody td {
     color: var(--text-color-second);
+    height: min-content;
 }
 
-tbody td:hover {
+p {
+    width: fit-content;
+}
+
+
+p:hover {
     color: var(--second);
     scale: 0.95;
     transition: all 0.2s ease-in-out;
-}
-
-</style>
+}</style>
