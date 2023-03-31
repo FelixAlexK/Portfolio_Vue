@@ -10,7 +10,7 @@
   --background-gradient: linear-gradient(to top, #0D1526, #131f31, #16263a, #1a2c45, #1E283A);
   --inter-font: 'Inter', sans-serif;
   --lato-font: 'Lato', sans-serif;
-  --header-height: 5rem;
+  --header-height: 6rem;
   --footer-background-color: #0C1120;
   --crimson-font: 'Crimson Pro', serif;
   --github-project-background: rgba(48, 56, 73, 0.3);
@@ -19,7 +19,6 @@
 
 body, html{
   font-family: var(--inter-font);
-  min-height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -36,84 +35,14 @@ a{
 }
 
 #app {
-  display: block;
   background-color: var(--primary);
-  width: 100%;
-	min-height: 100vh;
-}
-
-#nav{
-  position: fixed;
-  width: 100%;
-	height: var(--header-height);
-  top: 0;
-  left: 0;
-  right: 0;
-  background: var(--nav-background);
-  color: var(--text-color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 2;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  padding: 2rem;
-}
-
-
-#nav-items a{
-  font-size: 2em;
-  display: inline-block;
-  margin: 0 20px;
-  color: white;
-  opacity: 0.7;
-  transition: 0.2s ease color;
-}
-
-#nav-items a:hover:not(.router-link-active) {
-  opacity: 1;
-  color: var(--second);
-  transition: all 0.2s ease-in-out;
-}
-
-#nav-items a.router-link-active{
-  border-bottom: var(--second) solid 6px;
-  opacity: 1;
-  transition: all 0.2s ease-in-out;
-}
-
-
-#logo h1{
-  color: var(--text-color-primary);
-  font-family: var(--lato-font);
-  font-size: 3em;
-  letter-spacing: 0.05em;
-}
-
-#logo h1:hover{
-  color: var(--second);
-  font-size: 3.2em;
-  transition: all 0.2s ease-in-out;
-}
-
-
-
-.home,.contact,.about {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: var(--header-height) 0 0 0;
-}
-
-.home{
-  display: flex;
-  flex-direction: column;
+	max-height: 100vh;
 }
 
 
 .main-content-container{
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-image: var(--background-gradient);
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,30 +55,21 @@ a{
   display: flex;
   background: #0f1927;
   color: var(--text-color-second);
-  border-radius: 0.75rem;
+  border-radius: 2rem;
   padding: 0.25rem 1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 500;
 }
 
 
-.footer{
-  width: 100%;
-  background-color: var(--footer-background-color);
-  min-height: 25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-}
 
 ::-webkit-scrollbar{
-  width: 20px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -165,3 +85,4 @@ a{
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(85, 85, 100); 
 }
+
