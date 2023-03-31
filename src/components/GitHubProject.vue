@@ -2,14 +2,18 @@
 
 import { ref, watchEffect } from 'vue'
 
-const API_URL = `https://api.github.com/users/FelixAlexK/repos`
-const githubProjects = ref(null)
+const API_URL = `https://api.github.com/users/FelixAlexK/repos?sort=updated`
+const githubProjects = ref(' ')
 
 watchEffect(async () => {
     // this effect will run immediately and then
     // re-run whenever currentBranch.value changes
 
-    githubProjects.value = await (await fetch(API_URL)).json()
+    githubProjects.value = await (await fetch(API_URL, {
+        headers: {
+            accept: "application/vnd.github+json",
+        }
+    })).json()
 })
 
 </script>
@@ -32,8 +36,8 @@ watchEffect(async () => {
                             {{ project.stargazers_count }}
                         </div>
                         <div class="stat">
-                            <img src="/src/assets/icons/fork_icon.svg" format="svg" alt="forks" loading="lazy">
-                            {{ project.forks }}
+                            <img src="/src/assets/icons/fork_icon.svg" format="svg" alt="forks_count" loading="lazy">
+                            {{ project.forks_count }}
                         </div>
                         <div class="stat">
                             <img src="/src/assets/icons/eye_icon.svg" format="svg" alt="watchers_count" loading="lazy">
@@ -50,21 +54,26 @@ watchEffect(async () => {
 section {
     display: flex;
     justify-content: center;
-    margin: 9rem;
-    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+
 }
 
 article {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 9rem;
+    width: 90%;
 }
 
 .github-project {
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2rem;
-    margin: 4rem 0;
+    padding: 3rem 0;
+    width: 100%;
 }
 
 
@@ -74,11 +83,9 @@ article {
     justify-content: space-between;
     text-decoration: none;
     width: 100%;
-    min-height: 15rem;
     background-color: var(--github-project-background);
     border-radius: 0.5rem;
     transition: 150ms ease-in-out all;
-
 }
 
 .github-project-link:hover,
@@ -109,14 +116,14 @@ p {
 }
 
 .github-project-details h3 {
-    font-size: 1.5rem;
+    font-size: 1.5vh;
     color: var(--text-color-primary);
 }
 
 .github-project-details p {
     color: var(--text-color-second);
     margin: 0.5rem 0;
-    font-size: 1rem;
+    font-size: 1vh;
     line-height: 1.5em;
     opacity: 0.3;
 
@@ -138,15 +145,16 @@ p {
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1rem;
+    font-size: 1vh;
     color: var(--text-color-primary);
 
 
 }
 
 img {
-    fill: white;
-    width: 1rem;
+    display: block;
+    max-width: 100%;
+    min-width: 1rem;
     height: auto;
 }
 </style>
