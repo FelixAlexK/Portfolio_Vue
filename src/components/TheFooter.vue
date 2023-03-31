@@ -39,7 +39,7 @@ const scrollTop = () => {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1.5vh;
     text-transform: uppercase;
 }
 
