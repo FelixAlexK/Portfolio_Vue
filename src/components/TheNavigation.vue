@@ -44,7 +44,7 @@ const logoText = ref('FK');
 
 
 #nav-items a {
-    font-size: 2rem;
+    font-size: 2vh;
     display: inline-block;
     margin: 0 20px;
     color: white;
@@ -67,7 +67,7 @@ const logoText = ref('FK');
 #logo h1 {
     color: var(--text-color-primary);
     font-family: var(--lato-font);
-    font-size: 4rem;
+    font-size: 4vh;
     letter-spacing: 0.05em;
 }
 

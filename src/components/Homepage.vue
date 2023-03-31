@@ -43,6 +43,7 @@ article {
     align-items: center;
     flex-direction: column;
     gap: 1.25rem;
+    width: 90%;
 
 }
 
@@ -52,7 +53,7 @@ h1 {
     color: var(--text-color-primary);
     font-family: var(--crimson-font);
     font-weight: 700;
-    font-size: 8rem;
+    font-size: 8vh;
     margin: 0 0 16px 0;
 
 }
@@ -60,7 +61,7 @@ h1 {
 p {
     display: block;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2vh;
     color: var(--text-color-second);
     font-family: 'Inter', sans-serif;
     margin-block-start: 1rem;
