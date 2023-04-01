@@ -10,7 +10,7 @@ const scrollTop = () => {
 <template>
     <div class="footer">
         <div class="footer-logo">
-            <img src="../assets/logo/Felix Kuhbier-logos_white.png" alt="logo">
+            <img src="../assets/logo/logowhite.png" alt="logo" loading="lazy" format="png">
         </div>
 
         <div class="footer-content">
@@ -66,6 +66,4 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-
 </style>
