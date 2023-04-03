@@ -38,7 +38,7 @@ section {
 article {
     margin-top: var(--header-height);
     display: flex;
-    
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -84,5 +84,12 @@ p a:hover {
     color: var(--second);
     text-decoration: underline;
     transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
 }
 </style>

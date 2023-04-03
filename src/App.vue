@@ -2,7 +2,6 @@
 import TheNavigation from './components/TheNavigation.vue'
 import TheFooter from './components/TheFooter.vue';
 
-screen.orientation.lock('portrait');
 
 
 </script>

@@ -157,4 +157,11 @@ img {
     min-width: 1rem;
     height: auto;
 }
+
+@media (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
 </style>

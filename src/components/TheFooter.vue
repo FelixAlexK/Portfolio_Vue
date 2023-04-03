@@ -18,7 +18,7 @@ const scrollTop = () => {
             <routerLink @click="scrollTop" to="/about">Über mich</routerLink>
             <a href="mailto:felix.kuhbier@gmx.de">E-mail</a>
             <a href="https://github.com/FelixAlexK" target="_blank">Github</a>
-            <router-link to="/impressum">Impressum</router-link>
+            <router-link @click="scrollTop" to="/impressum">Impressum</router-link>
         </div>
     </div>
 </template>
@@ -91,8 +91,6 @@ img {
     img {
         display: none;
     }
-
-
 
 }
 </style>

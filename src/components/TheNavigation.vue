@@ -28,54 +28,94 @@ const logoText = ref('FK');
 </template>
 
 <style scoped>
-#nav {
-    position: fixed;
-    width: 100%;
-    height: var(--header-height);
-    background: var(--nav-background);
-    color: var(--text-color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    padding: 2rem;
+@media (max-width: 600px) {
+    #nav {
+        position: fixed;
+        width: 100%;
+        height: var(--header-height);
+        background: var(--nav-background);
+        color: var(--text-color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        padding: 2rem;
+    }
+
+    #nav-items a {
+        font-size: clamp(1rem, 1vw, 2rem);
+        display: inline-block;
+        margin-left: 2rem;
+        color: white;
+        opacity: 0.7;
+        transition: 0.2s ease color;
+    }
+
+    #nav-items a.router-link-active {
+        border-bottom: var(--second) solid 6px;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #logo h1 {
+        color: var(--text-color-primary);
+        font-family: var(--lato-font);
+        font-size: clamp(2rem, 4vw, 4rem);
+        letter-spacing: 0.05em;
+    }
+
+
 }
 
+@media (min-width: 601px) {
+    #nav {
+        position: fixed;
+        width: 100%;
+        height: var(--header-height);
+        background: var(--nav-background);
+        color: var(--text-color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 2;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        padding: 2rem;
+    }
 
-#nav-items a {
-    font-size: clamp(1rem, 1vw,2rem);
-    display: inline-block;
-    margin-left: 2rem;
-    color: white;
-    opacity: 0.7;
-    transition: 0.2s ease color;
+
+    #nav-items a {
+        font-size: clamp(1rem, 1vw, 2rem);
+        display: inline-block;
+        margin-left: 2rem;
+        color: white;
+        opacity: 0.7;
+        transition: 0.2s ease color;
+    }
+
+    #nav-items a:hover:not(.router-link-active) {
+        opacity: 1;
+        color: var(--second);
+        transition: all 0.2s ease-in-out;
+    }
+
+    #nav-items a.router-link-active {
+        border-bottom: var(--second) solid 6px;
+        opacity: 1;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #logo h1 {
+        color: var(--text-color-primary);
+        font-family: var(--lato-font);
+        font-size: clamp(2rem, 4vw, 4rem);
+        letter-spacing: 0.05em;
+    }
+
+    #logo h1:hover {
+        color: var(--second);
+        scale: 0.95;
+        transition: all 0.2s ease-in-out;
+    }
 }
-
-#nav-items a:hover:not(.router-link-active) {
-    opacity: 1;
-    color: var(--second);
-    transition: all 0.2s ease-in-out;
-}
-
-#nav-items a.router-link-active {
-    border-bottom: var(--second) solid 6px;
-    opacity: 1;
-    transition: all 0.2s ease-in-out;
-}
-
-#logo h1 {
-    color: var(--text-color-primary);
-    font-family: var(--lato-font);
-    font-size: clamp(2rem, 4vw, 4rem);
-    letter-spacing: 0.05em;
-}
-
-#logo h1:hover {
-    color: var(--second);
-    font-size: 3.2em;
-    transition: all 0.2s ease-in-out;
-}
-
-
 </style>

@@ -127,4 +127,12 @@ p:hover {
     color: var(--second);
     scale: 0.95;
     transition: all 0.2s ease-in-out;
-}</style>
+}
+
+@media (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+</style>
