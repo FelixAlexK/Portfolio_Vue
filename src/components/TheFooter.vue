@@ -15,9 +15,10 @@ const scrollTop = () => {
 
         <div class="footer-content">
             <router-link @click="scrollTop" to="/">Startseite</router-link>
-            <routerLink @click="scrollTop" to="/about">About</routerLink>
+            <routerLink @click="scrollTop" to="/about">Über mich</routerLink>
             <a href="mailto:felix.kuhbier@gmx.de">E-mail</a>
             <a href="https://github.com/FelixAlexK" target="_blank">Github</a>
+            <router-link to="/impressum">Impressum</router-link>
         </div>
     </div>
 </template>
@@ -68,9 +69,30 @@ img {
 }
 
 @media (max-width: 600px) {
+    .footer {
+        display: flex;
+        background-color: var(--footer-background-color);
+        width: 100%;
+        min-height: 15rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0.5rem;
+        gap: 1rem;
+        width: 100%;
+        font-size: clamp(1rem, 1vw, 2rem);
+        text-transform: uppercase;
+    }
+
+
     img {
         display: none;
     }
+
+
 
 }
 </style>
