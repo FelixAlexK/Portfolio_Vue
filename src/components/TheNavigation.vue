@@ -29,6 +29,11 @@ const logoText = ref('FK');
 
 <style scoped>
 @media (max-width: 600px) {
+
+    a{
+        text-decoration: none;
+    }
+
     #nav {
         position: fixed;
         width: 100%;
