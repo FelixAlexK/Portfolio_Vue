@@ -1,6 +1,10 @@
 <script setup>
 import TheNavigation from './components/TheNavigation.vue'
 import TheFooter from './components/TheFooter.vue';
+
+screen.orientation.lock();
+
+
 </script>
 
 <template>
@@ -11,6 +15,4 @@ import TheFooter from './components/TheFooter.vue';
   <TheFooter></TheFooter>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
