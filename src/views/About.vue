@@ -6,10 +6,10 @@
 
 
 <template>
-    <div class="about">
-        <div class="about-content">
+    <section>
+        <article>
             <h1>About</h1>
-            <div class="img-left-text-right">
+            <div class="text-image-container">
                 <div class="image-container">
 
                     <img src="../assets/img/IMG_4706.jpeg" alt="logo" loading="lazy" format="jpeg">
@@ -30,30 +30,32 @@
                     um meine Fähigkeiten zu verbessern.
                 </p>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
 </template>
 
 <style scoped>
-.about {
-
+section {
     width: 100%;
     display: flex;
     min-height: 100vh;
 }
 
-.about-content {
+article {
     width: 90%;
-    margin: var(--header-height);
+    margin-top: var(--header-height);
+    margin-left: 2rem;
     display: flex;
     flex-direction: column;
+
 }
 
-.about h1 {
+h1 {
     display: flex;
     align-items: flex-start;
-    font-size: 6vh;
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 700;
+    color: var(--text-color-primary);
 
 }
 
@@ -61,35 +63,66 @@
 img {
     display: block;
     max-width: 100%;
-    width: 30rem;
-    min-width: 1rem;
+    width: clamp(20rem, 60vw, 30rem);
     height: auto;
     border-radius: 2rem;
+    object-fit: cover;
+    object-position: center;
 }
 
-.img-left-text-right {
+.text-image-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin-bottom: 2rem;
-    gap: 4rem;
+    width: 100%;
+
 }
 
-.img-left-text-right strong {
-    font-size: 2vh;
-    font-weight: 700;
-    margin-bottom: 4rem;
-}
-
-.img-left-text-right p {
-    font-family: 'Inter', sans-serif;
+p strong {
     display: flex;
-    flex-wrap: wrap;
-    flex-flow: column;
-    text-align: left;
-    font-size: 2vh;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-color-primary);
+}
+
+p {
+    font-family: var(--inter-font);
+    display: block;
+    font-size: clamp(1.2rem, 1.5vw, 2.1rem);
     margin-block-start: 1rem;
     margin-block-end: 1rem;
-    max-width: 60ch;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    max-width: 45ch;
+    color: var(--text-color-second);
+    margin-left: 2rem;
+}
 
-}</style>
+@media (max-width: 600px) {
+    article {
+        
+        max-width: 600px;
+    }
+
+    
+
+    p {
+        margin: 0;
+        margin-top: 2rem;
+        max-width: 30ch;
+    }
+
+    .text-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        
+    }
+
+
+}
+</style>

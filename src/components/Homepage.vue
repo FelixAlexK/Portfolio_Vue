@@ -31,19 +31,18 @@ section {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: var(--header-height);
-    gap: 1.5rem;
+    min-height: 75vh;
 
 }
 
 article {
+    margin-top: var(--header-height);
     display: flex;
-    height: 75vh;
+    
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 1.25rem;
-    width: 90%;
+    max-width: 90%;
 
 }
 
@@ -53,7 +52,7 @@ h1 {
     color: var(--text-color-primary);
     font-family: var(--crimson-font);
     font-weight: 700;
-    font-size: 8vh;
+    font-size: clamp(2rem, 6vw, 4rem);
     margin: 0 0 16px 0;
 
 }
@@ -61,9 +60,9 @@ h1 {
 p {
     display: block;
     text-align: center;
-    font-size: 2vh;
+    font-size: clamp(1.2rem, 2vw, 2.1rem);
     color: var(--text-color-second);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--inter-font);
     margin-block-start: 1rem;
     margin-block-end: 1rem;
     margin-inline-start: 0px;

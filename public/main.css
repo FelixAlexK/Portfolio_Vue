@@ -60,7 +60,7 @@ a{
   text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
-  font-size: 2em;
+  font-size: clamp(1rem, 1.5vw, 4rem);
   font-weight: 500;
 }
 
@@ -85,3 +85,9 @@ a{
   background: rgb(85, 85, 100); 
 }
 
+@media (max-width: 600px) {
+  body, html{
+    overflow-x: hidden;
+  }
+
+}
