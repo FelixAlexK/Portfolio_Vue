@@ -8,7 +8,7 @@
 <template>
     <section>
         <article>
-            <h1>About</h1>
+            <h1>Über mich</h1>
             <div class="text-image-container">
                 <div class="image-container">
 
