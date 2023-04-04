@@ -96,6 +96,7 @@ const logoText = ref('FK');
         color: white;
         opacity: 0.7;
         transition: 0.2s ease color;
+        text-decoration: none;
     }
 
     #nav-items a:hover:not(.router-link-active) {

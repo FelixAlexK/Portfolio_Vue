@@ -67,6 +67,7 @@ p {
 }
 
 a {
+    text-decoration: none;
     color: var(--text-color-second);
 }
 
