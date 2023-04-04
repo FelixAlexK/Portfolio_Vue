@@ -13,8 +13,7 @@
                 74072 Heilbronn</p>
 
             <h2>Kontakt</h2>
-            <p>Telefon: 015750659344<br />
-                E-Mail: felix.kuhbier@gmx.de</p>
+            <p>E-Mail: felixk.dev@proton.me</p>
 
             <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
         </article>
@@ -46,7 +45,7 @@ h1 {
 
 }
 
-h2{
+h2 {
     display: flex;
     align-items: flex-start;
     font-size: clamp(1rem, 2vw, 2rem);
@@ -67,11 +66,11 @@ p {
     margin-left: 2rem;
 }
 
-a{
+a {
     color: var(--text-color-second);
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 </style>

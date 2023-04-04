@@ -16,7 +16,7 @@ const scrollTop = () => {
         <div class="footer-content">
             <router-link @click="scrollTop" to="/">Startseite</router-link>
             <routerLink @click="scrollTop" to="/about">Über mich</routerLink>
-            <a href="mailto:felix.kuhbier@gmx.de">E-mail</a>
+            <a href="mailto:felixk.dev@proton.me">E-mail</a>
             <a href="https://github.com/FelixAlexK" target="_blank">Github</a>
             <router-link @click="scrollTop" to="/impressum">Impressum</router-link>
         </div>
