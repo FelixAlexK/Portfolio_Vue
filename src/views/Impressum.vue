@@ -20,7 +20,7 @@
     </section>
 </template>
 
-<style>
+<style scoped>
 section {
     width: 100%;
     display: flex;
