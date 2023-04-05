@@ -3,7 +3,9 @@
 import { ref } from 'vue';
 
 const logoText = ref('FK');
-
+const scrollTop = () => {
+    window.scrollTo(0, 0);
+}
 
 
 </script>
@@ -19,8 +21,8 @@ const logoText = ref('FK');
 
         </div>
         <div id="nav-items">
-            <router-link to="/">Startseite</router-link>
-            <router-link to="/about">Über mich</router-link>
+            <router-link @click="scrollTop" to="/">Startseite</router-link>
+            <router-link @click="scrollTop" to="/about">Über mich</router-link>
         </div>
 
 
@@ -30,7 +32,7 @@ const logoText = ref('FK');
 <style scoped>
 @media (max-width: 600px) {
 
-    a{
+    a {
         text-decoration: none;
     }
 
