@@ -1,7 +1,57 @@
 <script setup>
 import skillData from '../data/skillData.json'
 import IconLoader from './IconLoader.vue'
+import { ref, onMounted } from 'vue'
+import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 
+const first = ref(null)
+const second = ref(null)
+const third = ref(null)
+
+
+const scrollTimeLine = new ScrollTimeline({
+    scrollOffsets: [
+        new CSSUnitValue(0, 'percent'),
+        new CSSUnitValue(50, 'percent'),
+    ],
+});
+
+onMounted(() => {
+    first.value.animate(
+        {
+            transform: ['translateX(25%)', 'translateX(0)'],
+        },
+        {
+            timeline: scrollTimeLine,
+        }
+    );
+
+    second.value.animate(
+        {
+            transform: ['translateX(-25%)', 'translateX(0)'],
+        },
+        {
+            timeline: scrollTimeLine,
+        }
+    );
+
+    third.value.animate(
+        {
+            transform: ['translateX(25%)', 'translateX(0)'],
+        },
+        {
+            timeline: scrollTimeLine,
+        }
+    );
+});
+
+const addBrandColor = (color, target) => {
+    if (target.tagName.toLowerCase() === 'svg') {
+        target.style.fill = color
+    }
+
+
+}
 
 
 
@@ -10,21 +60,41 @@ import IconLoader from './IconLoader.vue'
 
 
 <template>
-    <section id="skills-section">
+    <section class="page" id="skills-section">
+
         <article>
-
             <span id="content-header">Skills</span>
+        </article>
 
-            <div class="skill-detail">
-                <a class="skill-links" v-for="skill in skillData" :key="skill.id" :href="skill.link">
-                    <IconLoader :name="skill.icon_path"></IconLoader>
-                    <h3>{{ skill.name }}</h3>
+
+
+        <section class="logo-wall" id="logowall">
+            <div class="row" ref="first">
+                <a href="" v-for="skill in skillData.first" :key="skill.id">
+                    <IconLoader :name="skill.icon_path" @mouseover="addBrandColor(skill.color, $event.target)">
+                    </IconLoader>
                 </a>
 
+
             </div>
+            <div class="row" ref="second">
+                <a href="" v-for="skill in skillData.second" :key="skill.id">
+                    <IconLoader @mouseover="addBrandColor(skill.color, $event.target)" :name="skill.icon_path">
+                    </IconLoader>
+
+                </a>
+            </div>
+            <div class="row" ref="third">
+                <a href="" v-for="skill in skillData.third" :key="skill.id">
+                    <IconLoader :name="skill.icon_path" @mouseover="addBrandColor(skill.color, $event.target)">
+                    </IconLoader>
+
+                </a>
+            </div>
+        </section>
 
 
-        </article>
+
     </section>
 </template>
 
@@ -34,9 +104,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    min-height: 100%;
-
+    min-height: 100vh;
 }
 
 article {
@@ -50,33 +120,34 @@ article {
 }
 
 
-.skill-detail {
+
+.logo-wall {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
+    overflow: hidden;
 }
 
-.skill-links {
+.row {
+    width: 90%;
+    height: 20rem;
     display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color-primary);
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+
 }
 
 
 svg {
-    fill: white;
-    display: block;
+    fill: #FFFFFF;
     max-width: 100%;
-    width: 2rem;
-    min-width: 1rem;
-    height: auto;
-
+    display: block;
+    width: 3rem;
+    opacity: 0.4;
+    transition: all 250ms ease-in-out;
 }
 
-
+svg:hover {
+    opacity: 1;
+}
 
 
 
