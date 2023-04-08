@@ -1,4 +1,9 @@
 <script setup>
+import skillData from '../data/skillData.json'
+import IconLoader from './IconLoader.vue'
+
+
+
 
 
 </script>
@@ -9,66 +14,15 @@
         <article>
 
             <span id="content-header">Skills</span>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Programmiersprachen & Frameworks</th>
-                        <th>Software & Plattform</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <p>JavaScript</p>
-                        </td>
-                        <td>
-                            <p>git</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>HTML</p>
-                        </td>
-                        <td>
-                            <p>Windows</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>CSS</p>
-                        </td>
-                        <td>
-                            <p>Visual Studio Code</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Node.js</p>
-                        </td>
-                        <td>
-                            <p>Android Studio</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Vue.js</p>
-                        </td>
-                        <td>
-                            <p>IntelliJ</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Java</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Kotlin</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div class="skill-detail">
+                <a class="skill-links" v-for="skill in skillData" :key="skill.id" :href="skill.link">
+                    <IconLoader :name="skill.icon_path"></IconLoader>
+                    <h3>{{ skill.name }}</h3>
+                </a>
+
+            </div>
+
 
         </article>
     </section>
@@ -87,47 +41,45 @@ section {
 
 article {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
     margin-top: 9rem;
     width: 90%;
     gap: 2rem;
 }
 
-table {
-    border-collapse: collapse;
-    font-size: 2vh;
-    min-width: 400px;
+
+.skill-detail {
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
 }
 
-thead tr {
-    text-align: left;
-}
-
-th,
-td {
-
+.skill-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     color: var(--text-color-primary);
-    padding: 1rem 0;
-    padding-right: 4rem;
-}
-
-tbody td {
-    color: var(--text-color-second);
-    height: min-content;
-}
-
-p {
-    width: fit-content;
+    gap: 2rem;
 }
 
 
-p:hover {
-    color: var(--second);
-    scale: 0.95;
-    transition: all 0.2s ease-in-out;
+svg {
+    fill: white;
+    display: block;
+    max-width: 100%;
+    width: 2rem;
+    min-width: 1rem;
+    height: auto;
+
 }
+
+
+
+
+
 
 @media (max-width: 600px) {
     * {
