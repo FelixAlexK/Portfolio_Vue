@@ -1,4 +1,6 @@
-[
+{
+
+"first": [
     {
         "id": 1,
         "icon_path": "javascript.svg",
@@ -35,7 +37,10 @@
         "name": "Node.js",
         "rate": 30,
         "color": "#339933"
-    },
+    }
+],
+
+"second": [
     {
         "id": 5,
         "icon_path": "vuedotjs.svg",
@@ -71,7 +76,10 @@
         "name": "git",
         "rate": 60,
         "color": "#F05032"
-    },
+    }
+],
+
+"third": [
     {
         "id": 9,
         "icon_path": "windowsxp.svg",
@@ -109,3 +117,5 @@
         "color": "#000000"
     }
 ]
+
+}
