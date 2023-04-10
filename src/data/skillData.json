@@ -70,12 +70,12 @@
     },
     {
         "id": 8,
-        "icon_path": "git.svg",
+        "icon_path": "intellijidea.svg",
         "link": "",
-        "category": "Version Control System",
-        "name": "git",
+        "category": "Integrated Development Environment",
+        "name": "IntelliJ",
         "rate": 60,
-        "color": "#F05032"
+        "color": "#000000"
     }
 ],
 
@@ -109,12 +109,12 @@
     },
     {
         "id": 12,
-        "icon_path": "intellijidea.svg",
+        "icon_path": "git.svg",
         "link": "",
-        "category": "Integrated Development Environment",
-        "name": "IntelliJ",
+        "category": "Version Control System",
+        "name": "git",
         "rate": 60,
-        "color": "#000000"
+        "color": "#F05032"
     }
 ]
 
