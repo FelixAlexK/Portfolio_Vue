@@ -7,7 +7,6 @@ import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 const first = ref(null)
 const second = ref(null)
 const third = ref(null)
-const icon = ref(null)
 
 const scrollTimeLine = new ScrollTimeline({
     scrollOffsets: [
@@ -121,6 +120,7 @@ article {
 .logo-wall {
     width: 100%;
     overflow: hidden;
+    margin-top: 2rem;
 }
 
 .row {
@@ -136,7 +136,7 @@ article {
 svg {
     max-width: 100%;
     display: block;
-    width: 5rem;
+    width: clamp(1rem, 10vw, 6rem);
     opacity: 1;
     transition: all 250ms ease-in-out;
 }
@@ -144,9 +144,6 @@ svg {
 svg:hover {
     scale: 0.95;
 }
-
-
-
 
 @media (max-width: 600px) {
     * {
