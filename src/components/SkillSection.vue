@@ -7,7 +7,7 @@ import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
 const first = ref(null)
 const second = ref(null)
 const third = ref(null)
-
+const icon = ref(null)
 
 const scrollTimeLine = new ScrollTimeline({
     scrollOffsets: [
@@ -43,15 +43,12 @@ onMounted(() => {
             timeline: scrollTimeLine,
         }
     );
+
+
+
 });
 
-const addBrandColor = (color, target) => {
-    if (target.tagName.toLowerCase() === 'svg') {
-        target.style.fill = color
-    }
 
-
-}
 
 
 
@@ -71,7 +68,7 @@ const addBrandColor = (color, target) => {
         <section class="logo-wall" id="logowall">
             <div class="row" ref="first">
                 <a href="" v-for="skill in skillData.first" :key="skill.id">
-                    <IconLoader :name="skill.icon_path" @mouseover="addBrandColor(skill.color, $event.target)">
+                    <IconLoader :fill="skill.color" :name="skill.icon_path">
                     </IconLoader>
                 </a>
 
@@ -79,14 +76,14 @@ const addBrandColor = (color, target) => {
             </div>
             <div class="row" ref="second">
                 <a href="" v-for="skill in skillData.second" :key="skill.id">
-                    <IconLoader @mouseover="addBrandColor(skill.color, $event.target)" :name="skill.icon_path">
+                    <IconLoader :fill="skill.color" :name="skill.icon_path">
                     </IconLoader>
 
                 </a>
             </div>
             <div class="row" ref="third">
                 <a href="" v-for="skill in skillData.third" :key="skill.id">
-                    <IconLoader :name="skill.icon_path" @mouseover="addBrandColor(skill.color, $event.target)">
+                    <IconLoader :fill="skill.color" :name="skill.icon_path">
                     </IconLoader>
 
                 </a>
@@ -137,16 +134,15 @@ article {
 
 
 svg {
-    fill: #FFFFFF;
     max-width: 100%;
     display: block;
-    width: 3rem;
-    opacity: 0.4;
+    width: 5rem;
+    opacity: 1;
     transition: all 250ms ease-in-out;
 }
 
 svg:hover {
-    opacity: 1;
+    scale: 0.95;
 }
 
 
