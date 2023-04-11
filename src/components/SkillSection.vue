@@ -128,7 +128,7 @@ article {
     height: 20rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
 }
 
