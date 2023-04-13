@@ -3,7 +3,7 @@
 "first": [
     {
         "id": 1,
-        "icon_path": "vuedotjs.svg",
+        "icon_path": "vuedotjs",
         "link": "",
         "category": "",
         "name": "Vue.js",
@@ -12,7 +12,7 @@
     },
     {
         "id": 2,
-        "icon_path": "oracle.svg",
+        "icon_path": "oracle",
         "link": "",
         "category": "Programming language",
         "name": "Java",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "icon_path": "kotlin.svg",
+        "icon_path": "kotlin",
         "link": "",
         "category": "Programming language",
         "name": "Kotlin",
@@ -30,7 +30,7 @@
     },
     {
         "id": 4,
-        "icon_path": "nodedotjs.svg",
+        "icon_path": "nodedotjs",
         "link": "",
         "category": "",
         "name": "Node.js",
@@ -42,7 +42,7 @@
 "second": [
     {
         "id": 5,
-        "icon_path": "javascript.svg",
+        "icon_path": "javascript",
         "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         "category": "Programming language",
         "name": "JavaScript",
@@ -52,7 +52,7 @@
     },
     {
         "id": 6,
-        "icon_path": "css3.svg",
+        "icon_path": "css3",
         "link": "",
         "category": "Stylesheet Language",
         "name": "CSS",
@@ -61,7 +61,7 @@
     },
     {
         "id": 7,
-        "icon_path": "html5.svg",
+        "icon_path": "html5",
         "link": "",
         "category": "Markup Language",
         "name": "HTML",
@@ -70,7 +70,7 @@
     },
     {
         "id": 8,
-        "icon_path": "windowsxp.svg",
+        "icon_path": "windowsxp",
         "link": "",
         "category": "Operating System",
         "name": "Windows",
@@ -82,7 +82,7 @@
 "third": [
     {
         "id": 9,
-        "icon_path": "intellijidea.svg",
+        "icon_path": "intellijidea",
         "link": "",
         "category": "Integrated Development Environment",
         "name": "IntelliJ",
@@ -91,7 +91,7 @@
     },
     {
         "id": 10,
-        "icon_path": "visualstudiocode.svg",
+        "icon_path": "visualstudiocode",
         "link": "",
         "category": "Source-code Editor",
         "name": "Visual Studio Code",
@@ -100,7 +100,7 @@
     },
     {
         "id": 11,
-        "icon_path": "androidstudio.svg",
+        "icon_path": "androidstudio",
         "link": "",
         "category": "Integrated Development Environment",
         "name": "Android Studio",
@@ -109,7 +109,7 @@
     },
     {
         "id": 12,
-        "icon_path": "git.svg",
+        "icon_path": "git",
         "link": "",
         "category": "Version Control System",
         "name": "git",
