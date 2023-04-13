@@ -16,34 +16,37 @@ const scrollTimeLine = new ScrollTimeline({
 });
 
 onMounted(() => {
-    first.value.animate(
-        {
-            transform: ['translateX(25%)', 'translateX(0)'],
-        },
-        {
-            timeline: scrollTimeLine,
-        }
-    );
 
-    second.value.animate(
-        {
-            transform: ['translateX(-25%)', 'translateX(0)'],
-        },
-        {
-            timeline: scrollTimeLine,
-        }
-    );
-
-    third.value.animate(
-        {
-            transform: ['translateX(25%)', 'translateX(0)'],
-        },
-        {
-            timeline: scrollTimeLine,
-        }
-    );
+    if (window.matchMedia('(min-width: 600px)').matches) {
 
 
+        first.value.animate(
+            {
+                transform: ['translateX(25%)', 'translateX(0)'],
+            },
+            {
+                timeline: scrollTimeLine,
+            }
+        );
+
+        second.value.animate(
+            {
+                transform: ['translateX(-25%)', 'translateX(0)'],
+            },
+            {
+                timeline: scrollTimeLine,
+            }
+        );
+
+        third.value.animate(
+            {
+                transform: ['translateX(25%)', 'translateX(0)'],
+            },
+            {
+                timeline: scrollTimeLine,
+            }
+        );
+    } 
 
 });
 
@@ -66,7 +69,7 @@ onMounted(() => {
 
         <section class="logo-wall" id="logowall">
             <div class="row" ref="first">
-                <a href="" v-for="skill in skillData.first" :key="skill.id">
+                <a :href="skill.link" v-for="skill in skillData.first" :key="skill.id">
                     <IconLoader :fill="skill.color" :name="skill.icon_path">
                     </IconLoader>
                 </a>
@@ -74,14 +77,14 @@ onMounted(() => {
 
             </div>
             <div class="row" ref="second">
-                <a href="" v-for="skill in skillData.second" :key="skill.id">
+                <a :href="skill.link" v-for="skill in skillData.second" :key="skill.id">
                     <IconLoader :fill="skill.color" :name="skill.icon_path">
                     </IconLoader>
 
                 </a>
             </div>
             <div class="row" ref="third">
-                <a href="" v-for="skill in skillData.third" :key="skill.id">
+                <a :href="skill.link" v-for="skill in skillData.third" :key="skill.id">
                     <IconLoader :fill="skill.color" :name="skill.icon_path">
                     </IconLoader>
 
@@ -98,11 +101,10 @@ onMounted(() => {
 <style scoped>
 section {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 article {
@@ -128,7 +130,7 @@ article {
     height: 20rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
 }
 
@@ -149,6 +151,10 @@ svg:hover {
     * {
         margin: 0;
         padding: 0;
+    }
+
+    .row{
+        height: 10rem;
     }
 }
 </style>
