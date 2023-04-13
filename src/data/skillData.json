@@ -3,13 +3,12 @@
 "first": [
     {
         "id": 1,
-        "icon_path": "javascript.svg",
+        "icon_path": "vuedotjs.svg",
         "link": "",
-        "category": "Programming language",
-        "name": "JavaScript",
-        "rate": 40,
-        "color": "#F7DF1E"
-        
+        "category": "",
+        "name": "Vue.js",
+        "rate": 50,
+        "color": "#4FC08D"
     },
     {
         "id": 2,
@@ -43,12 +42,13 @@
 "second": [
     {
         "id": 5,
-        "icon_path": "vuedotjs.svg",
-        "link": "",
-        "category": "",
-        "name": "Vue.js",
-        "rate": 50,
-        "color": "#4FC08D"
+        "icon_path": "javascript.svg",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        "category": "Programming language",
+        "name": "JavaScript",
+        "rate": 40,
+        "color": "#F7DF1E"
+        
     },
     {
         "id": 6,
@@ -70,24 +70,24 @@
     },
     {
         "id": 8,
-        "icon_path": "intellijidea.svg",
-        "link": "",
-        "category": "Integrated Development Environment",
-        "name": "IntelliJ",
-        "rate": 60,
-        "color": "#000000"
-    }
-],
-
-"third": [
-    {
-        "id": 9,
         "icon_path": "windowsxp.svg",
         "link": "",
         "category": "Operating System",
         "name": "Windows",
         "rate": 70,
         "color": "#003399"
+    }
+],
+
+"third": [
+    {
+        "id": 9,
+        "icon_path": "intellijidea.svg",
+        "link": "",
+        "category": "Integrated Development Environment",
+        "name": "IntelliJ",
+        "rate": 60,
+        "color": "#000000"
     },
     {
         "id": 10,
