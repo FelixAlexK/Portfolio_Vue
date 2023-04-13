@@ -1,99 +1,76 @@
 <script setup>
-import skillData from '../data/skillData.json'
-import IconLoader from './IconLoader.vue'
-import { ref, onMounted } from 'vue'
-import 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
-
-const first = ref(null)
-const second = ref(null)
-const third = ref(null)
-
-const scrollTimeLine = new ScrollTimeline({
-    scrollOffsets: [
-        new CSSUnitValue(0, 'percent'),
-        new CSSUnitValue(50, 'percent'),
-    ],
-});
-
-onMounted(() => {
-
-    if (window.matchMedia('(min-width: 600px)').matches) {
-
-
-        first.value.animate(
-            {
-                transform: ['translateX(25%)', 'translateX(0)'],
-            },
-            {
-                timeline: scrollTimeLine,
-            }
-        );
-
-        second.value.animate(
-            {
-                transform: ['translateX(-25%)', 'translateX(0)'],
-            },
-            {
-                timeline: scrollTimeLine,
-            }
-        );
-
-        third.value.animate(
-            {
-                transform: ['translateX(25%)', 'translateX(0)'],
-            },
-            {
-                timeline: scrollTimeLine,
-            }
-        );
-    } 
-
-});
-
-
-
-
 
 
 </script>
 
 
 <template>
-    <section class="page" id="skills-section">
-
+    <section id="skills-section">
         <article>
+
             <span id="content-header">Skills</span>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Programmiersprachen & Frameworks</th>
+                        <th>Software & Plattform</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>JavaScript</p>
+                        </td>
+                        <td>
+                            <p>git</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>HTML</p>
+                        </td>
+                        <td>
+                            <p>Windows</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>CSS</p>
+                        </td>
+                        <td>
+                            <p>Visual Studio Code</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Node.js</p>
+                        </td>
+                        <td>
+                            <p>Android Studio</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Vue.js</p>
+                        </td>
+                        <td>
+                            <p>IntelliJ</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Java</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Kotlin</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </article>
-
-
-
-        <section class="logo-wall" id="logowall">
-            <div class="row" ref="first">
-                <a :href="skill.link" v-for="skill in skillData.first" :key="skill.id">
-                    <IconLoader :fill="skill.color" :name="skill.icon_path">
-                    </IconLoader>
-                </a>
-
-
-            </div>
-            <div class="row" ref="second">
-                <a :href="skill.link" v-for="skill in skillData.second" :key="skill.id">
-                    <IconLoader :fill="skill.color" :name="skill.icon_path">
-                    </IconLoader>
-
-                </a>
-            </div>
-            <div class="row" ref="third">
-                <a :href="skill.link" v-for="skill in skillData.third" :key="skill.id">
-                    <IconLoader :fill="skill.color" :name="skill.icon_path">
-                    </IconLoader>
-
-                </a>
-            </div>
-        </section>
-
-
-
     </section>
 </template>
 
@@ -101,60 +78,61 @@ onMounted(() => {
 <style scoped>
 section {
     display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
     width: 100%;
-    max-height: 100vh;
+    min-height: 100%;
+
 }
 
 article {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
     margin-top: 9rem;
     width: 90%;
     gap: 2rem;
 }
 
-
-
-.logo-wall {
+table {
+    border-collapse: collapse;
+    font-size: 2vh;
+    min-width: 400px;
     width: 100%;
-    overflow: hidden;
-    margin-top: 2rem;
 }
 
-.row {
-    width: 90%;
-    height: 20rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+thead tr {
+    text-align: left;
+}
 
+th,
+td {
+
+    color: var(--text-color-primary);
+    padding: 1rem 0;
+    padding-right: 4rem;
+}
+
+tbody td {
+    color: var(--text-color-second);
+    height: min-content;
+}
+
+p {
+    width: fit-content;
 }
 
 
-svg {
-    max-width: 100%;
-    display: block;
-    width: clamp(1rem, 10vw, 6rem);
-    opacity: 1;
-    transition: all 250ms ease-in-out;
-}
-
-svg:hover {
+p:hover {
+    color: var(--second);
     scale: 0.95;
+    transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 600px) {
     * {
         margin: 0;
         padding: 0;
-    }
-
-    .row{
-        height: 10rem;
     }
 }
 </style>
