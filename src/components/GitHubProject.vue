@@ -2,7 +2,8 @@
 
 import { ref, watchEffect, onMounted } from 'vue'
 
-const API_URL = `https://api.github.com/users/FelixAlexK/repos?sort=updated`
+const githubUser = "FelixAlexK"
+const API_URL = `https://api.github.com/users/${githubUser}/repos?sort=updated`
 const githubProjects = ref([])
 
 onMounted(() => {
