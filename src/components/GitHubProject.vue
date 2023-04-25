@@ -1,20 +1,20 @@
 <script setup>
 
-import { ref, watchEffect } from 'vue'
+import { ref, watchEffect, onMounted } from 'vue'
 
 const API_URL = `https://api.github.com/users/FelixAlexK/repos?sort=updated`
-const githubProjects = ref(' ')
+const githubProjects = ref([])
 
-watchEffect(async () => {
-    // this effect will run immediately and then
-    // re-run whenever currentBranch.value changes
-
-    githubProjects.value = await (await fetch(API_URL, {
+onMounted(() => {
+    fetch(API_URL, {
         headers: {
             accept: "application/vnd.github+json",
         }
-    })).json()
+    }).then((response) => response.json())
+        .then((data) => githubProjects.value = data)
+        .catch((error) => console.log(error.message))
 })
+
 
 </script>
 
@@ -32,15 +32,15 @@ watchEffect(async () => {
 
                     <div class="stats">
                         <div class="stat">
-                            <img src="/src/assets/icons/star_icon.svg" format="svg" alt="stargazers_count" loading="lazy">
+                            <img src="../assets/icons/github_icons/star_icon.svg" format="svg" alt="stargazers_count">
                             {{ project.stargazers_count }}
                         </div>
                         <div class="stat">
-                            <img src="/src/assets/icons/fork_icon.svg" format="svg" alt="forks_count" loading="lazy">
+                            <img src="../assets/icons/github_icons/fork_icon.svg" format="svg" alt="forks_count">
                             {{ project.forks_count }}
                         </div>
                         <div class="stat">
-                            <img src="/src/assets/icons/eye_icon.svg" format="svg" alt="watchers_count" loading="lazy">
+                            <img src="../assets/icons/github_icons/eye_icon.svg" format="svg" alt="watchers_count">
                             {{ project.watchers_count }}
                         </div>
                     </div>
@@ -116,14 +116,14 @@ p {
 }
 
 .github-project-details h3 {
-    font-size: 1.5vh;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     color: var(--text-color-primary);
 }
 
 .github-project-details p {
     color: var(--text-color-second);
     margin: 0.5rem 0;
-    font-size: 1vh;
+    font-size: clamp(0.5rem, 1vw, 1rem);
     line-height: 1.5em;
     opacity: 0.3;
 
