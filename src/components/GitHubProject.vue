@@ -118,8 +118,9 @@ p {
 }
 
 .github-project-details h3 {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vh, 1.5rem);
     color: var(--text-color-primary);
+    padding-right: 0.5rem;
 }
 
 .github-project-details p {
