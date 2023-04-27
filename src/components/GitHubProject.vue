@@ -85,6 +85,7 @@ article {
     text-decoration: none;
     width: 100%;
     background-color: var(--github-project-background);
+    box-shadow: var(--primary) 0px 20px 30px -10px;
     border-radius: 0.5rem;
     transition: 150ms ease-in-out all;
 }
@@ -124,7 +125,7 @@ p {
 .github-project-details p {
     color: var(--text-color-second);
     margin: 0.5rem 0;
-    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.5rem, 1vh, 1.2rem);
     line-height: 1.5em;
     opacity: 0.3;
 
