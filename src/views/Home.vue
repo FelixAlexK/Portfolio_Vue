@@ -1,7 +1,7 @@
 <script setup>
 import GitHubProject from '../components/GitHubProject.vue';
 import AboutMeLandingPage from '../components/Homepage.vue';
-import SkillLandingPage from '../components/SkillSection.vue'
+import SkillLandingPage from '../components/MySkills.vue'
 </script>
 
 <template>
