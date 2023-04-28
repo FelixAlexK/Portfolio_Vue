@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import skills from '../data/skillData.json'
-
+import Icon from '../components/Iconloader.vue'
 
 
 </script>
@@ -15,6 +15,7 @@ import skills from '../data/skillData.json'
                 <div v-for="skill in skills" :key="skill.id" class="skill-items-container"
                     :style="{ borderColor: skill.color }">
                     <div id="skill-item">
+                        <Icon :name="skill.icon_path"></Icon>
                         <h3>{{ skill.name }}</h3>
                         <p>{{ skill.category }}</p>
                     </div>
@@ -105,6 +106,12 @@ img {
     display: block;
     max-width: 100%;
     min-width: 1rem;
+    height: auto;
+}
+
+svg {
+    display: block;
+    width: 2rem;
     height: auto;
 }
 
