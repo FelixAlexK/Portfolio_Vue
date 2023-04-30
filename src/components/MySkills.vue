@@ -15,10 +15,11 @@ import Icon from '../components/Iconloader.vue'
                 <div v-for="skill in skills" :key="skill.id" class="skill-items-container"
                     :style="{ borderColor: skill.color }">
                     <div id="skill-item">
-                        <Icon :name="skill.icon_path"></Icon>
+
                         <h3>{{ skill.name }}</h3>
                         <p>{{ skill.category }}</p>
                     </div>
+                    <Icon :name="skill.icon_path"></Icon>
                 </div>
             </div>
 
@@ -56,8 +57,7 @@ article {
 
 .skill-items-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     text-decoration: none;
     width: 100%;
     background-color: var(--github-project-background);
@@ -76,6 +76,7 @@ article {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    position: relative;
 }
 
 
@@ -113,12 +114,35 @@ svg {
     display: block;
     width: 2rem;
     height: auto;
+    fill: var(--text-color-second);
+    opacity: 0.3;
 }
 
-@media (max-width: 600px) {
+svg:hover {
+    opacity: 1;
+}
+
+
+@media (width < 600px) {
     * {
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (width < 300px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .skill-items-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    svg {
+        display: none;
     }
 }
 </style>
