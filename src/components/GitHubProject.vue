@@ -1,9 +1,10 @@
 <script setup>
 
-import { ref, watchEffect, onMounted } from 'vue'
+import { ref, onMounted, defineAsyncComponent } from 'vue'
+
 
 const githubUser = "FelixAlexK"
-const API_URL = `https://api.github.com/users/${githubUser}/repos?sort=updated`
+const API_URL = `https://api.github.com/users/${githubUser}/repos?sort=pushed`
 const githubProjects = ref([])
 
 onMounted(() => {
@@ -15,6 +16,18 @@ onMounted(() => {
         .then((data) => githubProjects.value = data)
         .catch((error) => console.log(error.message))
 })
+
+const starIcon = defineAsyncComponent(() =>
+    import('../assets/icons/github_icons/star_icon.svg')
+)
+
+const forkIcon = defineAsyncComponent(() =>
+    import('../assets/icons/github_icons/fork_icon.svg')
+)
+
+const wazcherIcon = defineAsyncComponent(() =>
+    import('../assets/icons/github_icons/eye_icon.svg')
+)
 
 
 </script>
@@ -33,15 +46,15 @@ onMounted(() => {
 
                     <div class="stats">
                         <div class="stat">
-                            <img src="../assets/icons/github_icons/star_icon.svg" format="svg" alt="stargazers_count">
+                            <component :is='starIcon'></component>
                             {{ project.stargazers_count }}
                         </div>
                         <div class="stat">
-                            <img src="../assets/icons/github_icons/fork_icon.svg" format="svg" alt="forks_count">
+                            <component :is='forkIcon'></component>
                             {{ project.forks_count }}
                         </div>
                         <div class="stat">
-                            <img src="../assets/icons/github_icons/eye_icon.svg" format="svg" alt="watchers_count">
+                            <component :is='wazcherIcon'></component>
                             {{ project.watchers_count }}
                         </div>
                     </div>
