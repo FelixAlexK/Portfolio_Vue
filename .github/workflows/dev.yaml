@@ -3,7 +3,7 @@ name: Code Quality
 on:
   push:
     branches:
-      - development
+      - workflow
 
 jobs:
   lint:
