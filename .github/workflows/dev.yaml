@@ -1,0 +1,28 @@
+name: Code Quality
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  lint:
+    name: 🚧 Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: action/checkout@v3
+      - uses: action/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install & Lint
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{runner.os}}-node-${{hashFiles('**/package-lock.json')}}
+          restore-key: |
+            ${{runner.os}}-node-
+
+      - run: npm ci
+      - run: npm run lint
