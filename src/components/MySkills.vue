@@ -1,7 +1,6 @@
 <script setup>
-import { ref } from 'vue'
 import skills from '../data/skillData.json'
-import Icon from '../components/Iconloader.vue'
+import Icon from '../components/TheIconloader.vue'
 
 
 </script>
