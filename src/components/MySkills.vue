@@ -10,7 +10,7 @@ import Icon from '../components/TheIconloader.vue'
     <section id="skills-section">
         <article>
             <span id="content-header">Skills</span>
-            <div class="skill-container">
+            <div class="skill-grid">
                 <div v-for="skill in skills" :key="skill.id" class="skill-items-container"
                     :style="{ borderColor: skill.color }">
                     <div id="skill-item">
@@ -46,19 +46,20 @@ article {
     width: 90%;
 }
 
-.skill-container {
+.skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
-    padding: 3rem 0;
+    padding-top: 3rem;
     width: 100%;
 }
 
 .skill-items-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     text-decoration: none;
     width: 100%;
+    padding: 1rem 2rem;
     background-color: var(--github-project-background);
     border-radius: 0.5rem;
     border-bottom: 0.5rem inset;
@@ -74,7 +75,7 @@ article {
 #skill-item {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+
     position: relative;
 }
 
@@ -94,7 +95,6 @@ p {
 
 #skill-item p {
     color: var(--text-color-second);
-    margin: 0.5rem 0;
     font-size: clamp(0.5rem, 1vh, 1.2rem);
     line-height: 1.5em;
     opacity: 1;
@@ -102,12 +102,6 @@ p {
 
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    min-width: 1rem;
-    height: auto;
-}
 
 svg {
     display: block;
@@ -122,17 +116,29 @@ svg:hover {
 }
 
 
-@media (width < 600px) {
+@media (width < 60em) {
     * {
         margin: 0;
         padding: 0;
     }
+
+    .skill-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
 }
 
-@media (width < 300px) {
+@media (width < 40em) {
     * {
         margin: 0;
         padding: 0;
+    }
+
+    .skill-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
     }
 
     .skill-items-container {
@@ -142,6 +148,15 @@ svg:hover {
 
     svg {
         display: none;
+    }
+}
+
+@media (width < 20em) {
+
+    .skill-grid {
+
+        grid-template-columns: repeat(1, 1fr);
+
     }
 }
 </style>
