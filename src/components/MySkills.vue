@@ -7,7 +7,7 @@ import Icon from '../components/TheIconloader.vue'
 
 
 <template>
-    <section class="flex justify-center items-center w-full bg-slate-800">
+    <section class="flex justify-center items-center w-full  bg-slate-800">
         <article class="flex flex-col items-start mt-36 w-11/12">
             <span
                 class="flex bg-slate-900 text-white rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-3xl font-medium">Skills</span>

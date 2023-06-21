@@ -33,28 +33,32 @@ const wazcherIcon = defineAsyncComponent(() =>
 </script>
 
 <template>
-    <section id="project-section">
-        <article>
-            <span id="content-header">Projekte</span>
-            <div class="github-project">
-                <a class="github-project-link" v-for="project in githubProjects" :key="project.id" :href="project.html_url"
-                    :title="project.full_name" target="_blank">
-                    <div class="github-project-details">
-                        <h3>{{ project.full_name }}</h3>
-                        <p>{{ project.description }}</p>
+    <section class="flex justify-center items-center w-full bg-slate-800">
+        <article class="flex flex-col items-start mt-36 w-11/12">
+            <span
+                class="flex bg-slate-900 text-white rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-3xl font-medium">Projekte</span>
+            <div class="grid grid-cols-4 gap-8 py-12 w-full">
+                <a class="flex flex-col justify-between w-full bg-slate-800 shadow-xl rounded-lg transition-all ease-in-out hover:scale-95 focus:scale-95 focus-visible:outline-1 outline-emerald-300 "
+                    v-for="project in githubProjects" :key="project.id" :href="project.html_url" :title="project.full_name"
+                    target="_blank">
+                    <div class="flex flex-col p-4">
+                        <h3 class="p-0 m-0 transition-all ease-in-out text-2xl text-slate-50 pr-2">{{ project.full_name }}
+                        </h3>
+                        <p class="p-0 m-0 transition-all ease-in-out text-slate-50 my-2 text-xl opacity-30">{{
+                            project.description }}</p>
                     </div>
 
-                    <div class="stats">
-                        <div class="stat">
-                            <component :is='starIcon'></component>
+                    <div class="flex flex-row w-full border-t border-opacity-10 p-4 gap-8">
+                        <div class="flex flex-row justify-start items-center gap-2 text-xl text-slate-50">
+                            <component class="block max-w-full w-4 h-auto" :is='starIcon'></component>
                             {{ project.stargazers_count }}
                         </div>
-                        <div class="stat">
-                            <component :is='forkIcon'></component>
+                        <div class="flex flex-row justify-start items-center gap-2 text-xl text-slate-50">
+                            <component class="block max-w-full w-4 h-auto" :is='forkIcon'></component>
                             {{ project.forks_count }}
                         </div>
-                        <div class="stat">
-                            <component :is='wazcherIcon'></component>
+                        <div class="flex flex-row justify-start items-center gap-2 text-xl text-slate-50">
+                            <component class="block max-w-full w-4 h-auto" :is='wazcherIcon'></component>
                             {{ project.watchers_count }}
                         </div>
                     </div>
@@ -64,120 +68,4 @@ const wazcherIcon = defineAsyncComponent(() =>
     </section>
 </template>
 
-<style scoped>
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 9rem;
-    width: 90%;
-}
-
-.github-project {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-    padding: 3rem 0;
-    width: 100%;
-}
-
-
-.github-project-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-decoration: none;
-    width: 100%;
-    background-color: var(--github-project-background);
-    box-shadow: var(--primary) 0px 20px 30px -10px;
-    border-radius: 0.5rem;
-    transition: 150ms ease-in-out all;
-}
-
-.github-project-link:hover,
-:focus {
-    scale: 0.95;
-}
-
-.github-project-link:hover h3 {
-    color: var(--second);
-}
-
-.github-project-link:focus-visible {
-    outline: 0.1rem solid var(--second);
-}
-
-.github-project-details {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-
-.github-project-details h3,
-p {
-    margin: 0;
-    padding: 0;
-    transition: 150ms ease-in-out all;
-
-}
-
-.github-project-details h3 {
-    font-size: clamp(1rem, 1.5vh, 1.5rem);
-    color: var(--text-color-primary);
-    padding-right: 0.5rem;
-}
-
-.github-project-details p {
-    color: var(--text-color-second);
-    margin: 0.5rem 0;
-    font-size: clamp(0.5rem, 1vh, 1.2rem);
-    line-height: 1.5em;
-    opacity: 0.3;
-
-
-}
-
-.stats {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    border-top: 0.1rem solid rgba(255, 255, 255, 0.03);
-    padding: 1rem;
-    gap: 2rem;
-}
-
-.stat {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1vh;
-    color: var(--text-color-primary);
-
-
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    min-width: 1rem;
-    height: auto;
-}
-
-@media (max-width: 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-}
-</style>
+<style scoped></style>
