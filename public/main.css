@@ -1,93 +1,21 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@700&family=Inter&family=Lato&display=swap');
-
-:root{
-  --primary: #0D1526;
-  --second: #46fcb4;
-  --nav-background: rgba(16, 26, 40, 0.075);
-  --text-color-primary: #ffffff; 
-  --text-color-second: #CBD5E1;
-  --background-gradient: linear-gradient(to top, #0D1526, #131f31, #16263a, #1a2c45, #1E283A);
-  --inter-font: 'Inter', sans-serif;
-  --lato-font: 'Lato', sans-serif;
-  --header-height: 6rem;
-  --footer-background-color: #0C1120;
-  --crimson-font: 'Crimson Pro', serif;
-  --github-project-background: rgba(48, 56, 73, 0.3);
-}
-
-
-body, html{
-  font-family: var(--inter-font);
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  line-height: 1.5;
-  color: var(--text-color-primary);
-}
-
-*{
-box-sizing: border-box
-}
-
-a{
-  text-decoration: none;
-}
-
-#app {
-  background-color: var(--primary);
-}
-
-
-.main-content-container{
-  display: flex;
-  flex-direction: column;
-  background-image: var(--background-gradient);
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
-
-
-
-#content-header{
-  display: flex;
-  background: #0f1927;
-  color: var(--text-color-second);
-  border-radius: 2rem;
-  padding: 0.25rem 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-size: clamp(1rem, 1.5vw, 4rem);
-  font-weight: 500;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 
 
 
-::-webkit-scrollbar{
-  width: 10px;
-}
 
-::-webkit-scrollbar-track {
-  background: rgb(35, 35, 45);
-  
-}
 
-::-webkit-scrollbar-thumb {
-  background: rgb(136, 136, 145);
-   
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(85, 85, 100); 
-}
 
-@media (max-width: 600px) {
-  body, html{
-    overflow-x: hidden;
-  }
 
-}
+
+
+
+
+
+
+
+

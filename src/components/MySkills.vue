@@ -7,18 +7,23 @@ import Icon from '../components/TheIconloader.vue'
 
 
 <template>
-    <section id="skills-section">
-        <article>
-            <span id="content-header">Skills</span>
-            <div class="skill-container">
-                <div v-for="skill in skills" :key="skill.id" class="skill-items-container"
+    <section class="flex justify-center items-center w-full bg-slate-800">
+        <article class="flex flex-col items-start mt-36 w-11/12">
+            <span
+                class="flex bg-slate-900 text-white rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-3xl font-medium">Skills</span>
+            <div class="grid grid-cols-4 gap-8 py-12 w-full">
+                <div v-for="skill in skills" :key="skill.id"
+                    class="flex justify-around w-full bg-transparent rounded-lg border-b-4  shadow-2xl transition-all delay-150 ease-in-out hover:scale-95 focus:scale-95"
                     :style="{ borderColor: skill.color }">
-                    <div id="skill-item">
+                    <div class="flex flex-col p-4 relative">
 
-                        <h3>{{ skill.name }}</h3>
-                        <p>{{ skill.category }}</p>
+                        <h3 class="m-0 p-0 transition-all delay-150 ease-in-out text-2xl text-white">{{ skill.name }}
+                        </h3>
+                        <p class="text-base m-0 p-0 transition-all delay-150 ease-in-out text-slate-50 my-2 opacity-70">{{
+                            skill.category }}</p>
                     </div>
-                    <Icon :name="skill.icon_path"></Icon>
+                    <Icon class="block w-8 h-auto fill-slate-50 opacity-30 hover:opacity-100" :name="skill.icon_path">
+                    </Icon>
                 </div>
             </div>
 
@@ -28,120 +33,4 @@ import Icon from '../components/TheIconloader.vue'
 </template>
 
 
-<style scoped>
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 9rem;
-    width: 90%;
-}
-
-.skill-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-    padding: 3rem 0;
-    width: 100%;
-}
-
-.skill-items-container {
-    display: flex;
-    justify-content: space-around;
-    text-decoration: none;
-    width: 100%;
-    background-color: var(--github-project-background);
-    border-radius: 0.5rem;
-    border-bottom: 0.5rem inset;
-    box-shadow: var(--primary) 0px 20px 30px -10px;
-    transition: 150ms ease-in-out all;
-}
-
-.skill-items-container:hover,
-:focus {
-    scale: 0.95;
-}
-
-#skill-item {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    position: relative;
-}
-
-
-#skill-item h3,
-p {
-    margin: 0;
-    padding: 0;
-    transition: 150ms ease-in-out all;
-
-}
-
-#skill-item h3 {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
-    color: var(--text-color-primary);
-}
-
-#skill-item p {
-    color: var(--text-color-second);
-    margin: 0.5rem 0;
-    font-size: clamp(0.5rem, 1vh, 1.2rem);
-    line-height: 1.5em;
-    opacity: 1;
-
-
-}
-
-img {
-    display: block;
-    max-width: 100%;
-    min-width: 1rem;
-    height: auto;
-}
-
-svg {
-    display: block;
-    width: 2rem;
-    height: auto;
-    fill: var(--text-color-second);
-    opacity: 0.3;
-}
-
-svg:hover {
-    opacity: 1;
-}
-
-
-@media (width < 600px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media (width < 300px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .skill-items-container {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    svg {
-        display: none;
-    }
-}
-</style>
+<style scoped></style>

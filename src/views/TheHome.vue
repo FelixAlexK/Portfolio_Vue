@@ -1,17 +1,13 @@
 <script setup>
-import GitHubProject from '../components/GitHubProject.vue';
-import AboutMeLandingPage from '../components/TheHomepage.vue';
+//import GitHubProject from '../components/GitHubProject.vue';
 import SkillLandingPage from '../components/MySkills.vue'
+import AboutMeLandingPage from '../components/TheHomepage.vue';
 </script>
 
 <template>
-    <div class="home">
-
+    <div class="h-screen">
         <AboutMeLandingPage></AboutMeLandingPage>
-        <div class="main-content-container">
-            <SkillLandingPage></SkillLandingPage>
-            <GitHubProject></GitHubProject>
-        </div>
+        <SkillLandingPage></SkillLandingPage>
     </div>
 </template>
 
