@@ -28,7 +28,7 @@ export default {
       'primary-button-light': '#82737e',
       'secondary-button': '#0a060e',
       'secondary-button-light': '#ffffff',
-      'accent': '#0E1621',
+      'accent': '#016034',
       'accent-light': '#4c434a',
       'card': '#0E1621',
       'card-light': '#F0F1F0'
