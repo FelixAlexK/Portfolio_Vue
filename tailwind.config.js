@@ -20,18 +20,18 @@ export default {
       'laptopnl': '1440px'
     },
     colors: {
-      'text': '#ffffff',
+      'text': '#e7edf4',
       'text-light': '#020302',
-      'background': '#070b2c',
+      'background': '#0d141c',
       'background-light': '#f7f8f7',
-      'primary-button': '#c71f30',
+      'primary-button': '#3d3b81',
       'primary-button-light': '#82737e',
-      'secondary-button': '#090e39',
+      'secondary-button': '#0a060e',
       'secondary-button-light': '#ffffff',
-      'accent': '#30c71f',
+      'accent': '#0E1621',
       'accent-light': '#4c434a',
-      'card': '#15193B',
-      'card-light': '#D6D5D6'
+      'card': '#0E1621',
+      'card-light': '#F0F1F0'
     },
     darkMode: 'class',
     extend: {},
