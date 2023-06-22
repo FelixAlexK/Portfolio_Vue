@@ -10,6 +10,7 @@
     "lint": "eslint ./src --ext .js,.ts,.vue"
   },
   "dependencies": {
+    "flowbite": "^1.6.6",
     "vite-plugin-require": "^1.0.1",
     "vite-svg-loader": "^4.0.0",
     "vue": "^3.2.47",
