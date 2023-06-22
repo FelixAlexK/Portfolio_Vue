@@ -25,7 +25,7 @@
 
                 <div class="text-lg flex text-text ">
                     <button id="theme-toggle" type="button"
-                        class="text-text-light dark:text-text hover:bg-background-light dark:hover:bg-background focus:outline-none focus:ring-4 focus:ring-accent-light dark:focus:ring-accent rounded-lg text-sm p-2.5">
+                        class="text-text-light dark:text-text   focus:outline-none  rounded-lg text-sm p-2.5">
                         <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
