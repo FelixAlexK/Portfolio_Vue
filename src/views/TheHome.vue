@@ -6,9 +6,9 @@ import AboutMeLandingPage from '../components/TheHomepage.vue';
 </script>
 
 <template>
-    <div class="h-full">
+    <div class="h-full overflow-hidden">
         <AboutMeLandingPage></AboutMeLandingPage>
-        <div class="bg-gradient-to-t from-secondary-button to-background flex flex-col bg-no-repeat bg-cover">
+        <div class="dark:bg-gradient-to-t dark:from-secondary-button dark:to-background bg-gradient-to-t from-secondary-button-light to-background-light flex flex-col bg-no-repeat bg-cover">
             <SkillLandingPage></SkillLandingPage>
             <GitHubProject></GitHubProject>
         </div>
