@@ -1,6 +1,6 @@
 <script setup>
 import TheNavigation from './components/TheNavigation.vue'
-//import TheFooter from './components/TheFooter.vue';
+import TheFooter from './components/TheFooter.vue';
 
 
 
@@ -11,6 +11,7 @@ import TheNavigation from './components/TheNavigation.vue'
   <div>
     <router-view></router-view>
   </div>
+  <TheFooter></TheFooter>
 </template>
 
 <style scoped></style>
