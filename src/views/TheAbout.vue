@@ -6,17 +6,20 @@
 
 
 <template>
-    <section>
-        <article>
-            <h1>Über mich</h1>
-            <div class="text-image-container">
+    <section class="w-full min-h-screen flex justify-center items-center bg-gradient-to-t from-secondary-button to-background">
+        <article class="w-11/12 mt-36 flex flex-col items-start">
+            <span
+                class="flex bg-primary-button shadow-2xl hover:shadow-primary-button  text-text rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-3xl font-medium">Über
+                mich</span>
+            <div class="flex flex-wrap items-center justify-start mb-4 w-full py-12">
                 <div class="image-container">
 
-                    <img src="../assets/img/IMG_4706.jpeg" alt="logo" loading="lazy" format="jpeg">
+                    <img class="block  max-w-xl rounded-3xl object-cover object-center"
+                        src="../assets/img/IMG_4706.jpeg" alt="logo" loading="lazy" format="jpeg">
 
                 </div>
-                <p>
-                    <strong>Hi, ich bin Felix</strong>
+                <p class="font-inter block text-2xl ms-0 me-0 max-w-prose text-text ml-8">
+                    <strong class="flex font-bold mb-8 font-crimson text-4xl text-text">Hi, ich bin Felix</strong>
                     ich komme aus einer kleinen Gemeinde im Schwarzwald. Als Student im 4. Semester an der Hochschule
                     Heilbronn begeistere ich mich seit meiner Kindheit für die Welt der Computer
                     und der Programmierung. Es erfüllt mich mit Freude und Motivation, jeden Tag mehr darüber zu lernen.
@@ -34,5 +37,4 @@
     </section>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
