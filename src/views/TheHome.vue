@@ -6,10 +6,12 @@ import AboutMeLandingPage from '../components/TheHomepage.vue';
 </script>
 
 <template>
-    <div class="h-screen">
+    <div class="h-full">
         <AboutMeLandingPage></AboutMeLandingPage>
-        <SkillLandingPage></SkillLandingPage>
-        <GitHubProject></GitHubProject>
+        <div class="bg-gradient-to-t from-secondary-button to-background flex flex-col bg-no-repeat bg-cover">
+            <SkillLandingPage></SkillLandingPage>
+            <GitHubProject></GitHubProject>
+        </div>
     </div>
 </template>
 
