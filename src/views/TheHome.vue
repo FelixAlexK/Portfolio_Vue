@@ -1,5 +1,6 @@
 <script setup>
 //import GitHubProject from '../components/GitHubProject.vue';
+import svgLoader from 'vite-svg-loader';
 import GitHubProject from '../components/GitHubProject.vue';
 import SkillLandingPage from '../components/MySkills.vue'
 import AboutMeLandingPage from '../components/TheHomepage.vue';
@@ -8,7 +9,8 @@ import AboutMeLandingPage from '../components/TheHomepage.vue';
 <template>
     <div class="h-full overflow-hidden">
         <AboutMeLandingPage></AboutMeLandingPage>
-        <div class="dark:bg-gradient-to-t dark:from-secondary-button dark:to-background bg-gradient-to-t from-secondary-button-light to-background-light flex flex-col bg-no-repeat bg-cover">
+        <div
+            class="dark:bg-background from-secondary-button-light to-background-light flex flex-col bg-no-repeat bg-cover">
             <SkillLandingPage></SkillLandingPage>
             <GitHubProject></GitHubProject>
         </div>

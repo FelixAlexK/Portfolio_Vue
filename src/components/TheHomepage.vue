@@ -3,10 +3,13 @@
 </script>
 
 <template>
-    <section class=" flex justify-center h-2/3 dark:bg-background bg-background-light pt-16">
-        <article class=" m-8 py-4 flex justify-center items-center flex-col max-w-full  gap-8 ">
-            <h1 class="dark:text-text text-text-light font-crimson font-bold text-3xl ">Hi, ich bin Felix!</h1>
-            <div class="block text-center text-lg dark:text-text text-text-light font-inter w-full ">
+    <section
+        class=" flex justify-center h-screen  dark:bg-background bg-background-light pt-16 scroll-smooth">
+        <article class=" m-8 lg:m-16 2xl:m-32 py-8 flex justify-center items-center flex-col w-11/12 gap-8">
+            <h1 class="dark:text-text text-text-light font-crimson font-bold text-3xl lg:text-6xl 2xl:text-8xl">Hi, ich bin
+                Felix!</h1>
+            <div
+                class="block text-center text-lg lg:text-2xl 2xl:text-4xl dark:text-text text-text-light font-inter w-full lg:w-2/3 2xl:w-2/4">
                 <p>
                     <strong class="dark:text-accent text-accent-light">Student</strong>
                     an der <a class=" hover:underline transition-all ease-linear " href=" https://www.hs-heilbronn.de/de"
@@ -27,8 +30,6 @@
             </div>
 
 
-
         </article>
     </section>
 </template>
-
