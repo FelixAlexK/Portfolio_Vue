@@ -11,26 +11,18 @@ export default {
       inter: ['Inter', 'sans-serif'],
       syne: ['Syne', 'sans-serif']
     },
-    screens: {
-      'mobiles': '320px',
-      'mobilem': '375px',
-      'mobilel': '425px',
-      'tablet': '768px',
-      'laptop': '1024px',
-      'laptopnl': '1440px'
-    },
     colors: {
-      'text': '#e7edf4',
+      'text': '#fdf6e7',
       'text-light': '#020302',
-      'background': '#0d141c',
+      'background': '#000000',
       'background-light': '#f7f8f7',
-      'primary-button': '#3d3b81',
+      'primary-button': '#c93667',
       'primary-button-light': '#82737e',
-      'secondary-button': '#0a060e',
+      'secondary-button': '#f8e3ea',
       'secondary-button-light': '#ffffff',
-      'accent': '#016034',
+      'accent': '#cf4a76',
       'accent-light': '#4c434a',
-      'card': '#0E1621',
+      'card': '#101010',
       'card-light': '#F0F1F0'
     },
     darkMode: 'class',
