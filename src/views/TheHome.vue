@@ -10,7 +10,7 @@ import AboutMeLandingPage from '../components/TheHomepage.vue';
     <div class="h-full overflow-hidden">
         <AboutMeLandingPage></AboutMeLandingPage>
         <div
-            class="dark:bg-background from-secondary-button-light to-background-light flex flex-col bg-no-repeat bg-cover">
+            class="bg-gradient-to-t dark:from-secondary-button dark:to-background from-secondary-button-light to-background-light flex flex-col bg-no-repeat bg-cover">
             <SkillLandingPage></SkillLandingPage>
             <GitHubProject></GitHubProject>
         </div>
