@@ -1,7 +1,7 @@
 <script setup>
 
-import { ref, onMounted, defineAsyncComponent } from 'vue'
-
+import { ref, onMounted } from 'vue'
+import Icon from '../components/TheIconloader.vue'
 
 const githubUser = "FelixAlexK"
 const API_URL = `https://api.github.com/users/${githubUser}/repos?sort=pushed`
@@ -17,18 +17,6 @@ onMounted(() => {
         .catch((error) => console.log(error.message))
 })
 
-const starIcon = defineAsyncComponent(() =>
-    import('../assets/icons/github_icons/star_icon.svg')
-)
-
-const forkIcon = defineAsyncComponent(() =>
-    import('../assets/icons/github_icons/fork_icon.svg')
-)
-
-const wazcherIcon = defineAsyncComponent(() =>
-    import('../assets/icons/github_icons/eye_icon.svg')
-)
-
 
 </script>
 
@@ -38,48 +26,62 @@ const wazcherIcon = defineAsyncComponent(() =>
             <span
                 class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">Github
             </span>
-            <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-8 py-6">
-                <a class="  dark:bg-card bg-card-light shadow-xl rounded-lg transition-all ease-in-out hover:scale-95 focus:scale-95 focus-visible:outline-1 dark:outline-accent outline-accent-light"
+
+            <div class="grid grid-cols-3 gap-8  w-full py-6">
+                <a class="flex flex-col justify-between w-full dark:bg-card bg-card-light shadow-xl rounded-lg transition-all ease-in-out hover:scale-95 focus:scale-95 focus-visible:outline-1 dark:outline-accent outline-accent-light "
                     v-for="project in githubProjects" :key="project.id" :href="project.html_url" :title="project.full_name"
                     target="_blank">
-                    <div class="row-auto col-auto p-4">
 
+
+                    <div class="flex flex-col p-4">
                         <h3
-                            class=" font-crimson transition-all ease-in-out text-base lg:text-lg 2xl:text-2xl dark:text-text text-text-light ">
+                            class=" m-0 p-0 font-crimson transition-all ease-in-out text-base lg:text-lg 2xl:text-2xl dark:text-text text-text-light ">
                             {{
                                 project.full_name }}
                         </h3>
                         <p
-                            class="transition-all ease-in-out font-inter dark:text-text text-text-light text-sm lg:text-base 2xl:text-xl opacity-30">
+                            class="m-0 p-0 font-inter transition-all ease-in-out my-2 dark:text-text text-text-light text-sm lg:text-base 2xl:text-xl opacity-30">
                             {{
                                 project.description }}</p>
-
-
-                        <div
-                            class="flex w-full border-t border-opacity-10 dark:border-text border-text-light gap-8 mt-4 py-4">
-                            <div
-                                class="flex flex-row  items-baseline gap-2 text-base dark:text-text text-text-light">
-                                <component class=" dark:fill-text fill-text-light block  w-4 h-auto" :is='starIcon'>
-                                </component>
-                                {{ project.stargazers_count }}
-                            </div>
-                            <div
-                                class="flex flex-row  items-baseline gap-2 text-base dark:text-text text-text-light">
-                                <component class=" dark:fill-text fill-text-light block  w-4 h-auto" :is='forkIcon'>
-                                </component>
-                                {{ project.forks_count }}
-                            </div>
-                            <div
-                                class="flex flex-row  items-baseline gap-2 text-base dark:text-text text-text-light">
-                                <component class=" dark:fill-text fill-text-light block w-4 h-auto" :is='wazcherIcon'>
-                                </component>
-                                {{ project.watchers_count }}
-                            </div>
-                        </div>
                     </div>
+
+
+
+
+                    <div class="flex flex-row border-t-2 border-gray-500 border-opacity-10 p-4 gap-8">
+
+
+                        <div class="flex flex-row justify-start items-center gap-2  dark:text-text text-text-light text-xs">
+                            <Icon class=" dark:fill-text fill-text-light block aspect-auto  w-3 h-auto" :name="'star'">
+                            </Icon>
+                            {{ project.stargazers_count }}
+                        </div>
+                        <div class="flex flex-row justify-start items-center  gap-2 text-xs dark:text-text text-text-light">
+                            <Icon class=" dark:fill-text fill-text-light block aspect-auto  w-3 h-auto" :name="'fork'">
+                            </Icon>
+                            {{ project.forks_count }}
+                        </div>
+                        <div class="flex flex-row justify-start items-center gap-2 text-xs dark:text-text text-text-light">
+                            <Icon class=" dark:fill-text fill-text-light block aspect-auto w-3 h-auto" :name="'eye'">
+                            </Icon>
+                            {{ project.watchers_count }}
+                        </div>
+
+
+
+
+                    </div>
+
+
+
 
                 </a>
             </div>
+
+
+
+
+
         </article>
     </section>
 </template>
