@@ -10,7 +10,7 @@
         class="w-full  min-h-screen before:bg-gradient-to-t flex dark:bg-background  from-secondary-button-light to-background-light">
         <article class="w-11/12 m-8 py-32 2xl:py-0 flex flex-col 2xl:justify-center items-start ">
             <span
-                class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium">
+                class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">
                 Über mich</span>
 
             <div class="flex flex-col lg:p 2xl:flex-row 2xl:items-center gap-8 py-6 ">

@@ -36,7 +36,7 @@ const wazcherIcon = defineAsyncComponent(() =>
     <section class="flex justify-center w-full min-h-full">
         <article class="flex flex-col items-start py-8 w-11/12">
             <span
-                class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium">Github
+                class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">Github
             </span>
             <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-8 py-6">
                 <a class="  dark:bg-card bg-card-light shadow-xl rounded-lg transition-all ease-in-out hover:scale-95 focus:scale-95 focus-visible:outline-1 dark:outline-accent outline-accent-light"
