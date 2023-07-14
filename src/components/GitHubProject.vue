@@ -23,11 +23,19 @@ onMounted(() => {
 <template>
     <section class="flex justify-center w-full min-h-full">
         <article class="flex flex-col items-start py-8 w-11/12">
-            <span
-                class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">Github
-            </span>
+            <div class="flex flex-row justify-between w-full">
+                <span
+                    class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">
+                    <p>Github</p>
+                </span>
+                <a href="https://github.com/FelixAlexK" class="flex transition-all ease-in-out hover:translate-x-1/2">
+                    <Icon class="dark:fill-text fill-text-light" :name="'arrow'"></Icon>
+                </a>
 
-            <div class="grid grid-cols-3 gap-8  w-full py-6">
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 w-full py-6 ">
                 <a class="flex flex-col justify-between w-full dark:bg-card bg-card-light shadow-xl rounded-lg transition-all ease-in-out hover:scale-95 focus:scale-95 focus-visible:outline-1 dark:outline-accent outline-accent-light "
                     v-for="project in githubProjects" :key="project.id" :href="project.html_url" :title="project.full_name"
                     target="_blank">
