@@ -14,7 +14,7 @@ import Icon from '../components/TheIconloader.vue'
                 dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">Skills</span>
             <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 py-6 w-full">
                 <div v-for="skill in skills" :key="skill.id"
-                    class="max-w-2xl dark:bg-card bg-card-light rounded-lg border-b-4 shadow-2xl  transition-all ease-in-out hover:scale-95 focus:scale-95 h-fit"
+                    class="max-w-2xl dark:bg-card bg-card-light rounded-lg border-b-4 shadow-2xl  transition-all ease-in-out hover:scale-95 focus:scale-95"
                     :style="{ borderColor: skill.color }">
 
                     <div class="flex flex-row-reverse justify-between items-center m-6">
