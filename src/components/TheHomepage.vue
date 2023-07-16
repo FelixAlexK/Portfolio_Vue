@@ -5,7 +5,7 @@
 <template>
     <section
         class=" flex justify-center h-screen  dark:bg-background bg-background-light pt-16 scroll-smooth">
-        <article class=" m-8 lg:m-16 2xl:m-32 py-8 flex justify-center items-center flex-col w-11/12 gap-8">
+        <article class=" m-8 lg:m-16 py-8 flex justify-center items-center flex-col w-11/12 gap-8">
             <h1 class="dark:text-text text-text-light font-crimson font-bold text-3xl lg:text-6xl 2xl:text-8xl">Hi, ich bin
                 Felix!</h1>
             <div
