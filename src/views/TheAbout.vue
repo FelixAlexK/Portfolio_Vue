@@ -8,9 +8,9 @@
 <template>
     <section
         class="flex w-full justify-center min-h-full bg-gradient-to-t dark:from-secondary-button dark:to-background  from-secondary-button-light to-background-light bg-no-repeat bg-cover">
-        <article class="flex py-8 w-11/12">
+        <article class="flex py-44 w-11/12">
 
-            <div class="w-full flex flex-col justify-center items-center py-36 gap-8">
+            <div class="w-full flex flex-col justify-center items-center gap-8">
                 <img class="block w-max lg:max-w-md 2xl:max-w-lg aspect-square h-auto rounded-3xl object-cover object-center "
                     src="../assets/img/IMG_4706.jpeg" alt="image" loading="lazy" format="jpeg">
 
