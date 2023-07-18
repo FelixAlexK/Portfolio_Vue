@@ -35,7 +35,8 @@ import Icon from '../components/TheIconloader.vue'
         </article>
         <div class="flex pb-4">
             <a href="#skill-article">
-                <Icon class="rotate-90 block w-10 aspect-auto h-auto dark:fill-text fill-text-light " :name="'arrow'">
+                <Icon class=" block w-14 aspect-auto h-auto dark:fill-text fill-text-light  motion-safe:animate-bounce"
+                    :name="'arrowdown'">
                 </Icon>
             </a>
 
