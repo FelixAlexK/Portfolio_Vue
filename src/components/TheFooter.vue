@@ -32,7 +32,7 @@ import Icon from '../components/TheIconloader.vue'
         </div>
         <div class=" w-full flex justify-center items-center">
             <p class="dark:text-text text-text-light opacity-60 font-inter text-sm">
-                V1.4.1
+                V1.6.1
             </p>
         </div>
 
