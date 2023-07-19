@@ -3,9 +3,9 @@ import '/public/main.css'
 import App from './App.vue'
 
 import router from './router'
+import VueSmoothScroll from 'vue3-smooth-scroll'
 
-
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(VueSmoothScroll).mount('#app')
 
 
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
