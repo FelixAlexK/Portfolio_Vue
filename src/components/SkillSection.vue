@@ -36,7 +36,7 @@ import Icon from '../components/TheIconloader.vue'
                     </div>
 
                     <div class="m-6">
-                        <details class="group" role="list">
+                        <details class="group list-none">
                             <summary class="flex justify-end items-center font-medium cursor-pointer list-none">
                                 <span class="transition group-open:rotate-180 ">
                                     <Icon class=" block w-6 aspect-auto h-auto dark:fill-text fill-text-light rotate-90"
