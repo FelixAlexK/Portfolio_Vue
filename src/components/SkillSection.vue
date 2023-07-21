@@ -13,7 +13,7 @@ import Icon from '../components/TheIconloader.vue'
                 class="flex dark:bg-primary-button bg-primary-button-light shadow-2xl dark:hover:shadow-primary-button hover:shadow-primary-button-light 
                 dark:text-text text-text-light rounded-full py-1 px-4 tracking-widest uppercase align-middle whitespace-nowrap text-xl lg:text-3xl font-medium font-inter">Skills</span>
             <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 py-6 w-full">
-                <div v-for="skill in skills" :key="skill.id"
+                <div v-for="(skill, index) in skills" :key="index"
                     class="max-w-2xl dark:bg-card bg-card-light rounded-lg border-b-4 shadow-2xl  transition-all ease-in-out hover:scale-95 focus:scale-95"
                     :style="{ borderColor: skill.color }">
 
@@ -29,7 +29,7 @@ import Icon from '../components/TheIconloader.vue'
                                 {{ skill.name }}
                             </h3>
                             <p
-                                class="text-sm lg:text-base 2xl:text-xl transition-all ease-in-out dark:text-text text-text-light opacity-70 font-inter">
+                                class="text-sm lg:text-base 2xl:text-xl transition-all ease-in-out dark:text-text text-text-light opacity-70 font-inter break-words pr-4">
                                 {{ skill.category }}</p>
                         </div>
 
