@@ -3,75 +3,22 @@
 </script>
 
 <template>
-    <section>
-        <article>
-            <h1>Impressum</h1>
+    <section
+        class="flex w-full min-h-screen dark:bg-gradient-to-t dark:from-secondary-button dark:to-background bg-gradient-to-t from-secondary-button-light to-background-light justify-center items-center">
+        <article class="flex flex-col w-11/12 py-32 gap-8">
+            <h1 class="flex items-start font-crimson text-3xl lg:text-5xl 2xl:text-7xl font-bold dark:text-text text-text-light">Impressum</h1>
 
-            <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-            <p>Felix Kuhbier<br />
+            <h2 class="flex items-start font-crimson text-xl lg:text-3xl 2xl:text-5xl font-bold dark:text-text text-text-light">Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+            <p class="font-inter block text-lg lg:text-2xl 2xl:text-4xl max-w-prose dark:text-text text-text-light ml-8">Felix Kuhbier<br />
                 Karlstra&szlig;e 33<br />
                 74072 Heilbronn</p>
 
-            <h2>Kontakt</h2>
-            <p>E-Mail: felixk.dev@proton.me</p>
+            <h2 class="flex items-start font-crimson lg:text-3xl 2xl:text-5xl font-bold dark:text-text text-text-light">Kontakt</h2>
+            <p class="font-inter block text-lg lg:text-2xl 2xl:text-4xl max-w-prose dark:text-text text-text-light ml-8">E-Mail: felixk.dev@proton.me</p>
 
-            <p>Quelle: <a href="https://www.e-recht24.de">eRecht24</a></p>
+            <p class="font-inter block text-lg lg:text-2xl 2xl:text-4xl max-w-prose dark:text-text text-text-light ml-8">Quelle: <a class="dark:text-text text-text-light hover:underline"
+                    href="https://www.e-recht24.de">eRecht24</a></p>
         </article>
     </section>
 </template>
 
-<style scoped>
-section {
-    width: 100%;
-    display: flex;
-    min-height: 100vh;
-}
-
-article {
-    width: 90%;
-    margin-top: var(--header-height);
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: column;
-
-}
-
-h1 {
-    display: flex;
-    align-items: flex-start;
-    font-size: clamp(2rem, 6vw, 4rem);
-    font-weight: 700;
-    color: var(--text-color-primary);
-
-}
-
-h2 {
-    display: flex;
-    align-items: flex-start;
-    font-size: clamp(1rem, 2vw, 2rem);
-    font-weight: 700;
-    color: var(--text-color-primary);
-}
-
-p {
-    font-family: var(--inter-font);
-    display: block;
-    font-size: clamp(1.2rem, 1.5vw, 2.1rem);
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    max-width: 45ch;
-    color: var(--text-color-second);
-    margin-left: 2rem;
-}
-
-a {
-    text-decoration: none;
-    color: var(--text-color-second);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-</style>

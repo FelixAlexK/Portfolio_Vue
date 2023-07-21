@@ -5,12 +5,12 @@
         "link": "",
         "category": "Framework",
         "name": "Vue.js",
-        "rate": 50,
+        "rate": 40,
         "color": "#4FC08D"
     },
     {
         "id": 2,
-        "icon_path": "oracle",
+        "icon_path": "java",
         "link": "",
         "category": "Programming language",
         "name": "Java",
@@ -23,7 +23,7 @@
         "link": "",
         "category": "Programming language",
         "name": "Kotlin",
-        "rate": 40,
+        "rate": 60,
         "color": "#7F52FF"
     },
     {
@@ -35,8 +35,6 @@
         "rate": 30,
         "color": "#339933"
     },
-
-
 
     {
         "id": 5,
@@ -68,7 +66,7 @@
     },
     {
         "id": 8,
-        "icon_path": "windowsxp",
+        "icon_path": "windows",
         "link": "",
         "category": "Operating System",
         "name": "Windows",
@@ -102,7 +100,7 @@
         "link": "",
         "category": "Integrated Development Environment",
         "name": "Android Studio",
-        "rate": 60,
+        "rate": 65,
         "color": "#3DDC84"
     },
     {
@@ -111,8 +109,17 @@
         "link": "",
         "category": "Version Control System",
         "name": "git",
-        "rate": 60,
+        "rate": 65,
         "color": "#F05032"
+    },
+    {
+        "id": 13,
+        "icon_path": "tailwindcss",
+        "link": "",
+        "category": "Framework",
+        "name": "Tailwind CSS",
+        "rate": 40,
+        "color": "#38BDF9"
     }
 
 

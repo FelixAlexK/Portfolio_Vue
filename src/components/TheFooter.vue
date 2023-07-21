@@ -1,96 +1,41 @@
 <script setup>
-
-const scrollTop = () => {
-    window.scrollTo(0, 0);
-}
-
-
+import Icon from '../components/TheIconloader.vue'
 </script>
 
 <template>
-    <div class="footer">
-        <div class="footer-logo">
-            <img src="../assets/logo/logowhite.png" alt="logo" loading="lazy" format="png">
+    <div class="dark:bg-background bg-background-light w-full">
+        <div class="flex items-end w-full p-4">
+
+            <div
+                class=" flex flex-col items-end w-full gap-2 text-base lg:text-xl 2xl:text-2xl uppercase dark:text-text text-text-light">
+                <router-link class="hover:scale-95" to="/">
+                    <Icon class="dark:fill-text fill-text-light block aspect-auto w-10 2xl:w-12 h-auto" :name="'home'">
+                    </Icon>
+                </router-link>
+                <routerLink class="hover:scale-95" to="/about">
+                    <Icon class="dark:fill-text fill-text-light block aspect-auto w-10 2xl:w-12 h-auto" :name="'account'">
+                    </Icon>
+                </routerLink>
+                <a class="hover:scale-95" href="mailto:felixk.dev@proton.me">
+                    <Icon class="dark:fill-text fill-text-light block aspect-auto w-10 2xl:w-12 h-auto" :name="'email'">
+                    </Icon>
+                </a>
+                <a class="hover:scale-95" href="https://github.com/FelixAlexK" target="_blank">
+                    <Icon class="dark:fill-text fill-text-light block aspect-auto w-10 h-auto" :name="'github'"></Icon>
+                </a>
+                <router-link class="hover:scale-95" to="/impressum">
+                    <Icon class="dark:fill-text fill-text-light block aspect-auto w-10 2xl:w-12 h-auto"
+                        :name="'format_section'">
+                    </Icon>
+                </router-link>
+            </div>
+        </div>
+        <div class=" w-full flex justify-center items-center">
+            <p class="dark:text-text text-text-light opacity-60 font-inter text-sm">
+                V1.7.2
+            </p>
         </div>
 
-        <div class="footer-content">
-            <router-link @click="scrollTop" to="/">Startseite</router-link>
-            <routerLink @click="scrollTop" to="/about">Über mich</routerLink>
-            <a href="mailto:felixk.dev@proton.me">E-mail</a>
-            <a href="https://github.com/FelixAlexK" target="_blank">Github</a>
-            <router-link @click="scrollTop" to="/impressum">Impressum</router-link>
-        </div>
     </div>
 </template>
 
-<style scoped>
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    background-color: var(--footer-background-color);
-    width: 100%;
-    min-height: 15rem;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    font-size: 1.5vh;
-    text-transform: uppercase;
-}
-
-a {
-    text-decoration: none;
-    color: var(--text-color-primary);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.footer-logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-
-}
-
-img {
-    display: block;
-    width: 8rem;
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 600px) {
-    .footer {
-        display: flex;
-        background-color: var(--footer-background-color);
-        width: 100%;
-        min-height: 15rem;
-    }
-
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin: 0.5rem;
-        gap: 1rem;
-        width: 100%;
-        font-size: clamp(1rem, 1vw, 2rem);
-        text-transform: uppercase;
-    }
-
-
-    img {
-        display: none;
-    }
-
-}
-</style>
