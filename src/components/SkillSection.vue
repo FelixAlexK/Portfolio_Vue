@@ -19,7 +19,7 @@ import Icon from '../components/TheIconloader.vue'
 
                     <div class="flex flex-row-reverse justify-between items-center m-6">
                         <div class="flex">
-                            <Icon class="block w-14 aspect-auto h-auto dark:fill-text fill-text-light "
+                            <Icon class="block w-12 lg:w-14 aspect-auto h-auto dark:fill-text fill-text-light "
                                 :name="skill.icon_path">
                             </Icon>
                         </div>
