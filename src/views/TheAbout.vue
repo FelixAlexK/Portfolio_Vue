@@ -1,5 +1,5 @@
 <script setup>
-import TheNavDots from '../components/TheNavDots.vue';
+
 
 
 </script>
