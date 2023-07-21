@@ -2,7 +2,7 @@
 import GitHubProject from '../components/GitHubSection.vue';
 import SkillLandingPage from '../components/SkillSection.vue'
 import AboutMeLandingPage from '../components/LandingSection.vue';
-import Icon from '../components/TheIconloader.vue'
+import TheNavDots from '../components/TheNavDots.vue';
 </script>
 
 <template>
@@ -16,17 +16,7 @@ import Icon from '../components/TheIconloader.vue'
             </div>
         </div>
 
-        <div class="fixed right-0 top-1/2 -translate-y-1/2 z-10 grid mr-5 invisible lg:visible">
-            <a href="#landing" v-smooth-scroll>
-                <Icon :name="'dot'" class="block w-14 aspect-auto h-auto dark:fill-accent fill-accent-light "></Icon>
-            </a>
-            <a href="#skill" v-smooth-scroll>
-                <Icon :name="'dot'" class="block w-14 aspect-auto h-auto dark:fill-accent fill-accent-light "></Icon>
-            </a>
-            <a href="#github" v-smooth-scroll>
-                <Icon :name="'dot'" class="block w-14 aspect-auto h-auto dark:fill-accent fill-accent-light "></Icon>
-            </a>
-        </div>
+        <TheNavDots :sections="['landing', 'skill', 'github']"></TheNavDots>
     </div>
 </template>
 
