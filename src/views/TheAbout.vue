@@ -1,46 +1,64 @@
 <script setup>
-
+import TheNavDots from '../components/TheNavDots.vue';
 
 
 </script>
 
 
 <template>
-    <section
-        class="flex w-full justify-center min-h-full bg-gradient-to-t dark:from-secondary-button dark:to-background  from-secondary-button-light to-background-light bg-no-repeat bg-cover">
-        <article class="flex py-44 w-11/12">
+    <div
+        class="flex flex-col w-full justify-center items-center min-h-screen pt-32 bg-gradient-to-t dark:from-secondary-button dark:to-background  from-secondary-button-light to-background-light bg-no-repeat bg-cover">
+        <div class="flex flex-col w-11/12">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:grid-rows-1" id="me">
 
-            <div class="w-full flex flex-col justify-center items-center gap-8">
-                <img class="block w-max lg:max-w-md 2xl:max-w-lg aspect-square h-auto rounded-3xl object-cover object-center "
-                    src="../assets/img/IMG_4706.jpeg" alt="image" loading="lazy" format="jpeg">
+                <div class="flex justify-center md:justify-start items-center">
+                    <img class="block w-full max-w-5xl md:w-4/5 h-auto aspect-square rounded-lg shadow-lg align-middle"
+                        src="../assets/img/IMG_4706.jpeg" alt="Image" loading="lazy">
 
-                <h1 class=" font-bold font-crimson text-3xl lg:text-5xl 2xl:text-7xl dark:text-text text-text-light">
-                    Hi, ich bin
-                    Felix</h1>
-                <p
-                    class="block text-center text-lg lg:text-2xl 2xl:text-4xl dark:text-text text-text-light font-inter w-full lg:w-2/3 2xl:w-4/5 ">
-                    ich komme aus einer kleinen Gemeinde im Schwarzwald. Als Student im 4. Semester an der Hochschule
-                    Heilbronn begeistere ich mich seit meiner Kindheit für die Welt der Computer
-                    und der Programmierung. Es erfüllt mich mit Freude und Motivation, jeden Tag mehr darüber zu lernen.
-                    Neben meinem Studium unternehme ich gerne etwas mit Freunden, gehe essen, zocke und koche gerne.
-                    Durch mein Studium habe ich bereits zahlreiche kleine Projekte umgesetzt,
-                    bei denen ich wertvolle Erfahrungen in der Software-Entwicklung und der Zusammenarbeit im Team
-                    sammeln
-                    konnte.
-                    Diese Praxiserfahrung hilft mir, meine Kenntnisse zu vertiefen und mich kontinuierlich
-                    weiterzuentwickeln.
-                    Ich bin immer auf der Suche nach neuen Herausforderungen und Möglichkeiten,
-                    um meine Fähigkeiten zu verbessern.
+                </div>
+                <div class="flex justify-center items-center text-left">
+                    <p
+                        class="flex flex-col dark:text-text text-text-light font-inter align-middle subpixel-antialiased break-words text-sm lg:text-base xl:text-xl 2xl:text-4xl">
+                        <strong>Hi, ich bin Felix</strong>
+                        <br>
+                        <br>
+                        Computer und
+                        Programmierung faszinieren mich seit meiner Kindheit. Durch mein Studium vertiefe ich mein Wissen
+                        und suche immer nach neuen Herausforderungen, um mich weiterzuentwickeln.
+                    </p>
+                </div>
+            </div>
+            <div class="dark:text-text text-text-light py-8 2xl:py-16 subpixel-antialiased">
+                <h2 class="font-crimson text-lg md:text-2xl xl:text-3xl 2xl:text-4xl" id="passion">Leidenschaften und
+                    Interessen</h2>
+                <br>
+                <p class="font-inter text-sm lg:text-base xl:text-xl 2xl:text-3xl">
+                    Neben meinen Leidenschaften für Skateboarding,
+                    Sportarten wie Fußball, Basketball und Tennis, verbringe ich gerne Zeit mit meinen Freunden und höre
+                    gerne Musik. Außerdem begeistern mich Autos und Technik, und ich verfolge gespannt aktuelle
+                    Entwicklungen in diesen Bereichen. Meine vielseitigen Interessen und Leidenschaften treiben mich dazu
+                    an, immer wieder neue Erfahrungen zu sammeln und mich kontinuierlich weiterzuentwickeln.</p>
+                <h2 class="pt-8 2xl:pt-16 font-crimson text-lg md:text-2xl xl:text-3xl 2xl:text-4xl" id="education">Bildung
+                </h2>
+                <br>
+                <p class="font-inter text-sm lg:text-base xl:text-xl 2xl:text-3xl">
+                    Ich studiere derzeit angewandte Informatik an der Hochschule Heilbronn.
                 </p>
-
-
+                <h2 class="pt-8 2xl:pt-16 font-crimson text-lg md:text-2xl xl:text-3xl 2xl:text-4xl" id="bio">Bio</h2>
+                <br>
+                <p class="font-inter text-sm lg:text-base xl:text-xl 2xl:text-3xl">Ich bin Felix, ein vielseitiger und
+                    neugieriger Informatikstudent im 4. Semester an der Hochschule Heilbronn. Neben meinem Studium habe ich
+                    viele Interessen und Leidenschaften, darunter Skateboarding, Sportarten wie Fußball, Basketball und
+                    Tennis, Zeit mit Freunden verbringen, Musik hören sowie mich für Autos und Technik begeistern. Mein
+                    Studium der angewandten Informatik erfüllt mich mit Freude, und ich freue mich bereits auf mein
+                    bevorstehendes Praxissemester im 5. Semester. Meine vielseitigen Interessen und meine Leidenschaft für
+                    die Technologie treiben mich dazu an, immer wieder neue Erfahrungen zu sammeln und mich kontinuierlich
+                    weiterzuentwickeln.</p>
 
             </div>
 
-
-
-        </article>
-    </section>
+        </div>
+    </div>
 </template>
 
 <style scoped></style>
