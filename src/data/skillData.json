@@ -36,8 +36,6 @@
         "color": "#339933"
     },
 
-
-
     {
         "id": 5,
         "icon_path": "javascript",
@@ -113,6 +111,15 @@
         "name": "git",
         "rate": 65,
         "color": "#F05032"
+    },
+    {
+        "id": 13,
+        "icon_path": "tailwindcss",
+        "link": "",
+        "category": "Framework",
+        "name": "Tailwind CSS",
+        "rate": 40,
+        "color": "#38BDF9"
     }
 
 
