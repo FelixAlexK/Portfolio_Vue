@@ -38,11 +38,14 @@ import Icon from '../components/TheIconloader.vue'
                     <div class="m-6">
                         <details class="group">
                             <summary
-                                class="flex justify-end items-center font-medium cursor-pointer list-none list-image-none">
+                                class="flex justify-end items-center font-medium cursor-pointer list-none before:content-['']">
+
                                 <span class="transition group-open:rotate-180 ">
                                     <Icon class=" block w-6 aspect-auto h-auto dark:fill-text fill-text-light rotate-90"
                                         :name="'arrow'"></Icon>
                                 </span>
+
+
                             </summary>
                             <div class="w-full mt-8  bg-gray-200 rounded-full dark:bg-gray-700">
                                 <div class=" flex justify-center h-6 rounded-full text-text font-inter"
