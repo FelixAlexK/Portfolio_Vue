@@ -1,9 +1,9 @@
 <script setup>
 import TheNavigation from './components/TheNavigation.vue'
 import TheFooter from './components/TheFooter.vue';
+import { switchModes } from './scripts/darkmode';
 
-
-
+switchModes()
 </script>
 
 <template>
@@ -14,4 +14,4 @@ import TheFooter from './components/TheFooter.vue';
   <TheFooter></TheFooter>
 </template>
 
-<style scoped></style>
+
