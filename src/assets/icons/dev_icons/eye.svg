@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" fill="white">
+<svg baseProfile="tiny" viewBox="0 0 96 96" height="24px" xmlns="http://www.w3.org/2000/svg" fill="white">
     
     <g>
         <path
