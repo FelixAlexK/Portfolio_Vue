@@ -5,7 +5,7 @@
 
 
 <template>
-    <div class=" fixed h-12 lg:h-24 flex dark:text-text text-text-light w-full  p-4  z-10 shadow-2xl py-8 ">
+    <div class=" fixed h-12 lg:h-24 flex dark:text-text text-text-light w-full p-4 backdrop-blur-sm z-10 shadow-2xl py-8 ">
 
 
         <div class="flex justify-between 2xl:justify-around items-center w-full">
