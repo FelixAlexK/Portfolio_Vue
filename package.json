@@ -10,6 +10,7 @@
     "lint": "eslint ./src --ext .js,.ts,.vue"
   },
   "dependencies": {
+    "cssnano": "^6.0.1",
     "flowbite": "^1.6.6",
     "vite-plugin-require": "^1.0.1",
     "vite-svg-loader": "^4.0.0",
