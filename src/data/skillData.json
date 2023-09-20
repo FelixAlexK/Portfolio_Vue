@@ -1,126 +1,121 @@
 [
-    {
-        "id": 1,
-        "icon_path": "vuedotjs",
-        "link": "",
-        "category": "Framework",
-        "name": "Vue.js",
-        "rate": 40,
-        "color": "#4FC08D"
-    },
-    {
-        "id": 2,
-        "icon_path": "java",
-        "link": "",
-        "category": "Programming language",
-        "name": "Java",
-        "rate": 60,
-        "color": "#F80000"
-    },
-    {
-        "id": 3,
-        "icon_path": "kotlin",
-        "link": "",
-        "category": "Programming language",
-        "name": "Kotlin",
-        "rate": 60,
-        "color": "#7F52FF"
-    },
-    {
-        "id": 4,
-        "icon_path": "nodedotjs",
-        "link": "",
-        "category": "Framework",
-        "name": "Node.js",
-        "rate": 30,
-        "color": "#339933"
-    },
+  {
+    "id": 1,
+    "icon_path": "vuedotjs",
+    "link": "",
+    "category": "Framework",
+    "name": "Vue.js",
+    "rate": 40,
+    "color": "#4FC08D"
+  },
+  {
+    "id": 2,
+    "icon_path": "java",
+    "link": "",
+    "category": "Programming language",
+    "name": "Java",
+    "rate": 60,
+    "color": "#F80000"
+  },
+  {
+    "id": 3,
+    "icon_path": "kotlin",
+    "link": "",
+    "category": "Programming language",
+    "name": "Kotlin",
+    "rate": 60,
+    "color": "#7F52FF"
+  },
+  {
+    "id": 4,
+    "icon_path": "nodedotjs",
+    "link": "",
+    "category": "Framework",
+    "name": "Node.js",
+    "rate": 30,
+    "color": "#339933"
+  },
 
-    {
-        "id": 5,
-        "icon_path": "javascript",
-        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-        "category": "Programming language",
-        "name": "JavaScript",
-        "rate": 40,
-        "color": "#F7DF1E"
-        
-    },
-    {
-        "id": 6,
-        "icon_path": "css3",
-        "link": "",
-        "category": "Stylesheet Language",
-        "name": "CSS",
-        "rate": 40,
-        "color": "#1572B6"
-    },
-    {
-        "id": 7,
-        "icon_path": "html5",
-        "link": "",
-        "category": "Markup Language",
-        "name": "HTML",
-        "rate": 50,
-        "color": "#E34F26"
-    },
-    {
-        "id": 8,
-        "icon_path": "windows",
-        "link": "",
-        "category": "Operating System",
-        "name": "Windows",
-        "rate": 70,
-        "color": "#003399"
-    },
+  {
+    "id": 5,
+    "icon_path": "javascript",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "category": "Programming language",
+    "name": "JavaScript",
+    "rate": 40,
+    "color": "#F7DF1E"
+  },
+  {
+    "id": 6,
+    "icon_path": "css3",
+    "link": "",
+    "category": "Stylesheet Language",
+    "name": "CSS",
+    "rate": 40,
+    "color": "#1572B6"
+  },
+  {
+    "id": 7,
+    "icon_path": "html5",
+    "link": "",
+    "category": "Markup Language",
+    "name": "HTML",
+    "rate": 50,
+    "color": "#E34F26"
+  },
+  {
+    "id": 8,
+    "icon_path": "windows",
+    "link": "",
+    "category": "Operating System",
+    "name": "Windows",
+    "rate": 70,
+    "color": "#003399"
+  },
 
-
-
-    {
-        "id": 9,
-        "icon_path": "intellijidea",
-        "link": "",
-        "category": "Integrated Development Environment",
-        "name": "IntelliJ",
-        "rate": 60,
-        "color": "#000000"
-    },
-    {
-        "id": 10,
-        "icon_path": "visualstudiocode",
-        "link": "",
-        "category": "Source-code Editor",
-        "name": "Visual Studio Code",
-        "rate": 60,
-        "color": "#007ACC"
-    },
-    {
-        "id": 11,
-        "icon_path": "androidstudio",
-        "link": "",
-        "category": "Integrated Development Environment",
-        "name": "Android Studio",
-        "rate": 65,
-        "color": "#3DDC84"
-    },
-    {
-        "id": 12,
-        "icon_path": "git",
-        "link": "",
-        "category": "Version Control System",
-        "name": "git",
-        "rate": 65,
-        "color": "#F05032"
-    },
-    {
-        "id": 13,
-        "icon_path": "tailwindcss",
-        "link": "",
-        "category": "Framework",
-        "name": "Tailwind CSS",
-        "rate": 40,
-        "color": "#38BDF9"
-    }
-
-
+  {
+    "id": 9,
+    "icon_path": "intellijidea",
+    "link": "",
+    "category": "Integrated Development Environment",
+    "name": "IntelliJ",
+    "rate": 60,
+    "color": "#000000"
+  },
+  {
+    "id": 10,
+    "icon_path": "visualstudiocode",
+    "link": "",
+    "category": "Source-code Editor",
+    "name": "Visual Studio Code",
+    "rate": 60,
+    "color": "#007ACC"
+  },
+  {
+    "id": 11,
+    "icon_path": "androidstudio",
+    "link": "",
+    "category": "Integrated Development Environment",
+    "name": "Android Studio",
+    "rate": 65,
+    "color": "#3DDC84"
+  },
+  {
+    "id": 12,
+    "icon_path": "git",
+    "link": "",
+    "category": "Version Control System",
+    "name": "git",
+    "rate": 65,
+    "color": "#F05032"
+  },
+  {
+    "id": 13,
+    "icon_path": "tailwindcss",
+    "link": "",
+    "category": "Framework",
+    "name": "Tailwind CSS",
+    "rate": 40,
+    "color": "#38BDF9"
+  }
 ]
